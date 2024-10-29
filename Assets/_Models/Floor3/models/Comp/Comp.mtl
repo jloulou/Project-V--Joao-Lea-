@@ -1,0 +1,385 @@
+# OBJ Material Export by Luxion KeyShot
+
+newmtl google.jpg
+Kd 0.8 0.8 0.8
+
+newmtl [Metal_Corrogated_Shiny]
+Kd 0.207843 0.207843 0.207843
+
+newmtl *10
+Kd 0 0.6 0.6
+
+newmtl [Metal_Corrogated_Shiny]3
+Kd 0.239216 0.239216 0.239216
+
+newmtl *9
+Kd 1 0.498039 1
+
+newmtl [Color_I04]
+Kd 0.6 0.6 1
+
+newmtl *8
+Kd 0.752941 0.752941 0.752941
+
+newmtl *7
+Kd 1 1 0
+
+newmtl [Metal_Corrogated_Shiny]
+Kd 0.207843 0.207843 0.207843
+
+newmtl *6
+Kd 0 0.4 0.8
+
+newmtl [Metal_Corrogated_Shiny]2
+Kd 0.478431 0.478431 0.478431
+
+newmtl [Color_005]
+Kd 0.447059 0.447059 0.447059
+
+newmtl [Color_006]
+Kd 0.337255 0.337255 0.337255
+
+newmtl blackmouse2
+Kd 0.152941 0.164706 0.176471
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
+
+newmtl keyboard
+Kd 0.129412 0.152941 0.188235
