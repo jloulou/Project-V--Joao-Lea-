@@ -13,24 +13,32 @@ public class PlatformPlayerHandler : MonoBehaviour
     [Tooltip("Enable debug logs")]
     public bool debugMode = true;
 
-    private BoxCollider[] platformColliders;
+    private List<BoxCollider> platformColliders = new List<BoxCollider>();
     private Transform currentPlayer;
     private Platform platform;
 
     private void Start()
     {
-        platformColliders = GetComponentsInChildren<BoxCollider>();
+        GetAllCollidersInChildren();
         platform = GetComponent<Platform>();
-        SetCollidersState(true);
 
         if (debugMode)
         {
-            Debug.Log($"Platform Handler initialized with {platformColliders.Length} colliders");
+            Debug.Log($"Platform Handler initialized with {platformColliders.Count} colliders");
             Debug.Log($"Player Layer Mask: {playerLayer.value}");
         }
     }
 
-    private void SetCollidersState(bool enabled)
+    private void GetAllCollidersInChildren()
+    {
+        for (int i = 0; i < transform.childCount; ++i)
+        {
+            platformColliders.Add(transform.GetChild(i).GetComponent<BoxCollider>());
+        }
+
+    }
+
+    public void SetCollidersState(bool enabled)
     {
         foreach (BoxCollider collider in platformColliders)
         {
@@ -39,59 +47,24 @@ public class PlatformPlayerHandler : MonoBehaviour
         }
     }
 
-    private void FixedUpdate()
+    private void OnTriggerEnter(Collider other)
     {
-        if (platformColliders.Length == 0) return;
-
-        BoxCollider mainCollider = platformColliders[0];
-        Vector3 boxCenter = transform.position + mainCollider.center;
-        boxCenter.y += mainCollider.size.y / 2 + detectionHeight / 2;
-
-        Vector3 boxHalfExtents = mainCollider.size;
-        boxHalfExtents.y = detectionHeight / 2;
-
-        // Check for player above platform
-        Collider[] hitColliders = Physics.OverlapBox(
-            boxCenter,
-            boxHalfExtents,
-            transform.rotation,
-            playerLayer
-        );
-
-        if (debugMode && hitColliders.Length > 0)
+        if (other.gameObject.CompareTag("Player"))
         {
-            Debug.Log($"Detected object: {hitColliders[0].name} on layer {hitColliders[0].gameObject.layer}");
+            currentPlayer = other.transform;
+
+            currentPlayer.transform.parent = transform;
         }
+    }
 
-        // If we found the player and it's not already parented
-        if (hitColliders.Length > 0 && hitColliders[0].transform != currentPlayer)
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
         {
-            currentPlayer = hitColliders[0].transform;
-            currentPlayer.parent = transform;
-            if (debugMode) Debug.Log($"Parented player {currentPlayer.name} to platform");
-        }
-        // If we lost the player
-        else if (hitColliders.Length == 0 && currentPlayer != null)
-        {
-            if (debugMode) Debug.Log($"Unparenting player {currentPlayer.name} from platform");
-            currentPlayer.parent = null;
+            currentPlayer.transform.parent = null;
+
             currentPlayer = null;
         }
     }
 
-    private void OnDrawGizmos()
-    {
-        if (!debugMode || platformColliders == null || platformColliders.Length == 0) return;
-
-        BoxCollider mainCollider = platformColliders[0];
-        Vector3 boxCenter = transform.position + mainCollider.center;
-        boxCenter.y += mainCollider.size.y / 2 + detectionHeight / 2;
-
-        Vector3 boxHalfExtents = mainCollider.size;
-        boxHalfExtents.y = detectionHeight / 2;
-
-        Gizmos.color = Color.yellow;
-        Gizmos.matrix = Matrix4x4.TRS(boxCenter, transform.rotation, Vector3.one);
-        Gizmos.DrawWireCube(Vector3.zero, boxHalfExtents * 2);
-    }
 }

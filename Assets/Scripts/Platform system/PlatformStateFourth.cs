@@ -4,6 +4,8 @@ public class FourthFloorState : PlatformState
 {
     public override void OnEnter()
     {
+        GetComponent<PlatformPlayerHandler>().SetCollidersState(true);
+
         targetY = platform.floors[4].position.y;
         platform.currentFloor = 4;
     }

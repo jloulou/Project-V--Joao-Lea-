@@ -4,6 +4,8 @@ public class SecondFloorState : PlatformState
 {
     public override void OnEnter()
     {
+        GetComponent<PlatformPlayerHandler>().SetCollidersState(true);
+
         targetY = platform.floors[2].position.y;
         platform.currentFloor = 2;
     }
