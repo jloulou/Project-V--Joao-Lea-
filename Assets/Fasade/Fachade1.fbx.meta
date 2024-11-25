@@ -3,7 +3,1572 @@ guid: f2f1efe0142c5744ebe0a7ea72bce7ae
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.018
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.019
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.020
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.021
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.022
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.023
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.024
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.025
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.026
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.027
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.028
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.029
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.030
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.031
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.032
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.033
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.034
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.035
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.036
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.037
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.038
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.039
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.040
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.041
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.051
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.054
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.055
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.056
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.057
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.058
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.059
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.060
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.061
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.062
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.063
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.064
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.065
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.066
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.067
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.068
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.069
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.070
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.071
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.072
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.073
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.074
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.076
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.077
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.078
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.079
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.080
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.081
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.082
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.083
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.084
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.085
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.086
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.087
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.088
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.089
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.090
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.091
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.092
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.093
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.094
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.095
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.096
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.097
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.098
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.099
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.100
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.101
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.102
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.103
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.104
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.105
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.106
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.107
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.108
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.109
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.110
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.111
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.112
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.113
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.114
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.115
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.116
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.117
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.118
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.119
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.120
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.121
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.123
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.125
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.126
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.128
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.129
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.131
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.134
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.136
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.139
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.141
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.142
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.143
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.144
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.147
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.148
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.149
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.154
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.157
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.158
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.159
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.160
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.161
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.162
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.163
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.164
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.165
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.166
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.167
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.168
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.169
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.170
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.171
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.172
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.173
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.174
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.175
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.176
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.177
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.178
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.179
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.180
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.181
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.182
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.183
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.184
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.185
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.186
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.187
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.188
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.189
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.190
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.191
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.192
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.193
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.194
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.195
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.196
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.197
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.198
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.199
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.200
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.201
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.667
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.668
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.669
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.670
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.671
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.672
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.673
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.674
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.675
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.676
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.677
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.678
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.679
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.680
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.681
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.682
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.683
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.684
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.685
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.686
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.687
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.688
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.689
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.690
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.691
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.692
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.693
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.694
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.695
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.696
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.697
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.698
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.699
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.700
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.701
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.702
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.703
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.704
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.705
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.706
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.707
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.708
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.709
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.710
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.711
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.712
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.713
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.714
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.715
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.716
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.717
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.718
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.719
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.720
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.721
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.722
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.723
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.724
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.725
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.726
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.727
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.728
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.729
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.730
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.731
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.732
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.733
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.734
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.735
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.736
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.737
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.738
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.739
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.740
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.741
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.742
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.743
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.744
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.745
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.746
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.747
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.748
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.749
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.750
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.751
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.752
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.753
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.754
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.755
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.756
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.757
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.758
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.759
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.760
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.761
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.762
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.763
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.764
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.765
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.766
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.767
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.768
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.769
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.770
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.771
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.772
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.773
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.774
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.775
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.776
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.777
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.778
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.779
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.780
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.781
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.782
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.783
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.784
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.785
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.786
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.787
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.788
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.789
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.790
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.791
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.792
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.793
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.794
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.795
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.796
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.797
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.798
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.799
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.800
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.801
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.802
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.803
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.804
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.805
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.806
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.807
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.808
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.809
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.810
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.811
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.812
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.813
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.814
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.815
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.816
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.817
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.818
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.819
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_052.820
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_053
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_053.001
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_053.002
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_053.012
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Rough_053.013
+    second: {fileID: 2100000, guid: 15bf10656585d3c42a0eedcbd7b3ad85, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
