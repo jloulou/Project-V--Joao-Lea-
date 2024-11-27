@@ -31449,14 +31449,6 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 904311706}
-    - target: {fileID: 1668728727959975384, guid: 0f92a2c6049ce40b1853dac5e8d1d36c, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2203033213850727966, guid: 0f92a2c6049ce40b1853dac5e8d1d36c, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4138545343206448490, guid: 0f92a2c6049ce40b1853dac5e8d1d36c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.49
@@ -31497,10 +31489,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6563958259587852226, guid: 0f92a2c6049ce40b1853dac5e8d1d36c, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6998770872236911229, guid: 0f92a2c6049ce40b1853dac5e8d1d36c, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -31508,10 +31496,6 @@ PrefabInstance:
     - target: {fileID: 7885806122215829241, guid: 0f92a2c6049ce40b1853dac5e8d1d36c, type: 3}
       propertyPath: m_Name
       value: Floor3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8038592642464153217, guid: 0f92a2c6049ce40b1853dac5e8d1d36c, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -67237,7 +67221,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -67263,7 +67247,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e42270a11c28f4744b73a18278e4ef33, type: 2}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
