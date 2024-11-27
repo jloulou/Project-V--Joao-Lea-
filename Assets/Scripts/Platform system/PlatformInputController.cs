@@ -13,7 +13,7 @@ public class PlatformInputController : MonoBehaviour
 
     void Update()
     {
-        // Use number keys 0-4 to move to specific floors
+       
         if (Input.GetKeyDown(KeyCode.Alpha0))
             platform.nextFloor = 0;
         else if (Input.GetKeyDown(KeyCode.Alpha1))
