@@ -31,7 +31,7 @@ public class PlatformPlayerHandler : MonoBehaviour
 
     private void GetAllCollidersInChildren()
     {
-        for (int i = 0; i < transform.childCount; ++i)
+        for (int i = 0; i < 4; ++i)
         {
             platformColliders.Add(transform.GetChild(i).GetComponent<BoxCollider>());
         }
