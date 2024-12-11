@@ -9,9 +9,9 @@ public class PlatformButton : XRGrabInteractable
     public Platform platform;
     public int floor;
 
-    protected override void OnSelectEntering(SelectEnterEventArgs args)
+    protected override void OnSelectExiting(SelectExitEventArgs args)
     {
-        base.OnSelectEntering(args);
+        base.OnSelectExiting(args);
         platform.nextFloor = floor;
     }
 }
