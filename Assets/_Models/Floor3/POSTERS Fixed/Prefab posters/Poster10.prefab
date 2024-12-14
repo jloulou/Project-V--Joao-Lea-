@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2110387108451441857}
   - component: {fileID: 3151131301458755747}
   - component: {fileID: 8739088826141612225}
+  - component: {fileID: 4342444908568813107}
   m_Layer: 0
   m_Name: Poster10
   m_TagString: Untagged
@@ -29,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1426258439118895195}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.11592466, y: -0.0019607071, z: 0.023367235}
   m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
   m_ConstrainProportionsScale: 1
@@ -273,6 +274,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LerpTime: 1
+--- !u!65 &4342444908568813107
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1426258439118895195}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.020000001, y: 0.019999996, z: 0.019999998}
+  m_Center: {x: 0.0000000037252903, y: 0.0000019073486, z: -0.000000029802322}
 --- !u!1 &2702293889179398322
 GameObject:
   m_ObjectHideFlags: 0
