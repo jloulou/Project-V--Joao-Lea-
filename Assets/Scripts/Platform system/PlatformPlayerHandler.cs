@@ -45,6 +45,12 @@ public class PlatformPlayerHandler : MonoBehaviour
             collider.enabled = enabled;
             if (debugMode) Debug.Log($"Collider {collider.name} enabled: {enabled}");
         }
+
+        if(currentPlayer)
+        {
+            currentPlayer.transform.parent = enabled ? transform : null;
+            Debug.Log(enabled);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -63,7 +69,7 @@ public class PlatformPlayerHandler : MonoBehaviour
         {
             currentPlayer.transform.parent = null;
 
-            currentPlayer = null;
+            //currentPlayer = null;
         }
     }
 
