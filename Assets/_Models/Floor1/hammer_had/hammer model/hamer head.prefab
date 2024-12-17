@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 6555671989910275328}
   - component: {fileID: 5447300075665083531}
   - component: {fileID: 4858720754479105312}
+  - component: {fileID: 1718570312223327205}
   m_Layer: 0
   m_Name: hamer head
   m_TagString: Untagged
@@ -63,7 +64,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.06332782, y: -0.009257598, z: -0.0005874679, w: 0.99794966}
   m_LocalPosition: {x: 0.351, y: -1.52, z: 1.333}
-  m_LocalScale: {x: 522.8, y: 522.8, z: 522.8}
+  m_LocalScale: {x: 402.7, y: 402.7, z: 402.7}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4209524453087600598}
@@ -153,11 +154,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f0bd0c85cd45ec47bd79322f623f21d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 0.01
-  movementAmount: 0.01
-  rotationXSpeed: 1
-  rotationYSpeed: 1
-  rotationZSpeed: 1
+  movementSpeed: 0.013
+  movementAmount: 0.16
+  rotationXSpeed: 0.43
+  rotationYSpeed: 0.65
+  rotationZSpeed: 0.3
   isGrabbed: 0
 --- !u!54 &5447300075665083531
 Rigidbody:
@@ -332,3 +333,17 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 0
+--- !u!114 &1718570312223327205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3941424365862599936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 162b4e5a3d1fcd043afbc6bf71ab2e51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MultiSelectPosition: 0
+  m_MultiSelectRotation: 1

@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 4569153219274009114}
   - component: {fileID: 3599251764586743235}
   - component: {fileID: 9066181522084712853}
+  - component: {fileID: 1613685136208109989}
   m_Layer: 0
   m_Name: Hand
   m_TagString: Untagged
@@ -61,7 +62,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.205, y: -0.7186, z: 0.799}
-  m_LocalScale: {x: 1.55, y: 1.55, z: 1.55}
+  m_LocalScale: {x: 1.9, y: 1.9, z: 1.9}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4073377782532499582}
@@ -102,10 +103,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 0.001
-  movementAmount: 0.01
-  rotationXSpeed: 1
-  rotationYSpeed: 1
-  rotationZSpeed: 1
+  movementAmount: 0.4
+  rotationXSpeed: 0.1
+  rotationYSpeed: 0.57
+  rotationZSpeed: 0.4
   isGrabbed: 0
 --- !u!54 &3599251764586743235
 Rigidbody:
@@ -280,6 +281,20 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 0
+--- !u!114 &1613685136208109989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6567034390251359135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 162b4e5a3d1fcd043afbc6bf71ab2e51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MultiSelectPosition: 0
+  m_MultiSelectRotation: 1
 --- !u!1 &7793651822669317969
 GameObject:
   m_ObjectHideFlags: 0

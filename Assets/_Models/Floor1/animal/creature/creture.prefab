@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7330464077962331499}
   - component: {fileID: 4557061266750160596}
   - component: {fileID: 6125646466086511447}
+  - component: {fileID: 6437342347888696170}
   m_Layer: 0
   m_Name: creture
   m_TagString: Untagged
@@ -270,12 +271,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f0bd0c85cd45ec47bd79322f623f21d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 0.1
-  movementAmount: 0.1
+  movementSpeed: 0.014
+  movementAmount: 0.49
   rotationXSpeed: 0.1
-  rotationYSpeed: 0.1
+  rotationYSpeed: 0.37
   rotationZSpeed: 0.1
   isGrabbed: 0
+--- !u!114 &6437342347888696170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1221645840707269356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 162b4e5a3d1fcd043afbc6bf71ab2e51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MultiSelectPosition: 0
+  m_MultiSelectRotation: 1
 --- !u!1 &7319444311326150623
 GameObject:
   m_ObjectHideFlags: 0
@@ -300,10 +315,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7319444311326150623}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0.62216574, y: -0.67677253, z: -0.3360205, w: -0.20488788}
   m_LocalPosition: {x: -0.00027, y: 0.00127, z: 0.00004}
   m_LocalScale: {x: 1.5000008, y: 1.5000001, z: 1.5000007}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5895624196207991264}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 225.216, y: 11.529007, z: 90}

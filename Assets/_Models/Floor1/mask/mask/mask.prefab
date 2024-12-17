@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4599052848211823098}
   - component: {fileID: 4378840591510458325}
   - component: {fileID: 5048376065792285610}
+  - component: {fileID: 365581949003537344}
   m_Layer: 0
   m_Name: mask
   m_TagString: Untagged
@@ -123,9 +124,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 0.01
   movementAmount: 0.2
-  rotationXSpeed: 0.01
-  rotationYSpeed: 0.01
-  rotationZSpeed: 0.01
+  rotationXSpeed: 0.48
+  rotationYSpeed: 0.13
+  rotationZSpeed: 0.33
   isGrabbed: 0
 --- !u!54 &4378840591510458325
 Rigidbody:
@@ -276,6 +277,20 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 0
+--- !u!114 &365581949003537344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3907125547090605937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 162b4e5a3d1fcd043afbc6bf71ab2e51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MultiSelectPosition: 0
+  m_MultiSelectRotation: 1
 --- !u!1 &5257078639945244989
 GameObject:
   m_ObjectHideFlags: 0

@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 1904068596710061224}
   - component: {fileID: 672699614124483651}
   - component: {fileID: 6529887951516461553}
+  - component: {fileID: 1947158388976015293}
   m_Layer: 0
   m_Name: object 1
   m_TagString: Untagged
@@ -63,7 +64,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.10098912, y: -0.9267784, z: -0.2883379, w: 0.21850473}
   m_LocalPosition: {x: -1.0241, y: -1.4320006, z: 0.11246228}
-  m_LocalScale: {x: 300, y: 300.0001, z: 300}
+  m_LocalScale: {x: 381.9, y: 381.9, z: 381.9}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7401441009488833572}
@@ -301,9 +302,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f0bd0c85cd45ec47bd79322f623f21d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 0.01
-  movementAmount: 0.01
+  movementSpeed: 0.04
+  movementAmount: 0.13
   rotationXSpeed: 0.02
   rotationYSpeed: 0.02
   rotationZSpeed: 0.2
   isGrabbed: 0
+--- !u!114 &1947158388976015293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3161476572955308038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 162b4e5a3d1fcd043afbc6bf71ab2e51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MultiSelectPosition: 0
+  m_MultiSelectRotation: 1

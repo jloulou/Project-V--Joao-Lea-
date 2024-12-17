@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3190823341731440185}
   - component: {fileID: 1885321666304216148}
   - component: {fileID: 2960614961276852095}
+  - component: {fileID: 2899521645669056945}
   m_Layer: 0
   m_Name: Poster12
   m_TagString: Untagged
@@ -32,7 +33,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.08325342, y: -0.0019615646, z: 0.04193995}
-  m_LocalScale: {x: 0.96575344, y: 0.9657537, z: 0.9657535}
+  m_LocalScale: {x: 28.2, y: 0.1342857, z: 39.88285}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3665181698453268214}
@@ -213,7 +214,7 @@ MonoBehaviour:
   m_StartingInteractionStrengthFilters: []
   m_AttachTransform: {fileID: 0}
   m_SecondaryAttachTransform: {fileID: 0}
-  m_UseDynamicAttach: 0
+  m_UseDynamicAttach: 1
   m_MatchAttachPosition: 1
   m_MatchAttachRotation: 1
   m_SnapToColliderVolume: 1
@@ -232,7 +233,7 @@ MonoBehaviour:
   m_SmoothRotation: 0
   m_SmoothRotationAmount: 8
   m_TightenRotation: 0.1
-  m_TrackScale: 1
+  m_TrackScale: 0
   m_SmoothScale: 0
   m_SmoothScaleAmount: 8
   m_TightenScale: 0.1
@@ -295,6 +296,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.019999998, y: 0.019999994, z: 0.019999994}
   m_Center: {x: 0, y: -0.0000019073486, z: -0.000000029802322}
+--- !u!114 &2899521645669056945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4616487905515511637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 162b4e5a3d1fcd043afbc6bf71ab2e51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MultiSelectPosition: 0
+  m_MultiSelectRotation: 1
 --- !u!1 &7199732024799520971
 GameObject:
   m_ObjectHideFlags: 0

@@ -127,6 +127,7 @@ GameObject:
   - component: {fileID: 2168154281347318}
   - component: {fileID: 1277995371148151397}
   - component: {fileID: 7224999097232554912}
+  - component: {fileID: 296461770116537665}
   m_Layer: 0
   m_Name: mouse blend
   m_TagString: Untagged
@@ -185,10 +186,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 0.01
-  movementAmount: 0.01
-  rotationXSpeed: 0.1
-  rotationYSpeed: 0.1
-  rotationZSpeed: 0.1
+  movementAmount: 0.31
+  rotationXSpeed: 0.22
+  rotationYSpeed: 0.46
+  rotationZSpeed: 0.13
   isGrabbed: 0
 --- !u!54 &1277995371148151397
 Rigidbody:
@@ -339,3 +340,17 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 0
+--- !u!114 &296461770116537665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8854073611363403448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 162b4e5a3d1fcd043afbc6bf71ab2e51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MultiSelectPosition: 0
+  m_MultiSelectRotation: 1

@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 8529238006595415713}
   - component: {fileID: 7488806617496139476}
   - component: {fileID: 7652094864369994813}
+  - component: {fileID: 3157076906358789385}
   m_Layer: 0
   m_Name: shoe
   m_TagString: Untagged
@@ -152,11 +153,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f0bd0c85cd45ec47bd79322f623f21d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 0.01
-  movementAmount: 0.01
-  rotationXSpeed: 1
-  rotationYSpeed: 1
-  rotationZSpeed: 1
+  movementSpeed: 0.012
+  movementAmount: 0.34
+  rotationXSpeed: 0.18
+  rotationYSpeed: 0.61
+  rotationZSpeed: 0.61
   isGrabbed: 0
 --- !u!54 &7488806617496139476
 Rigidbody:
@@ -307,3 +308,17 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 0
+--- !u!114 &3157076906358789385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8112916184711906571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 162b4e5a3d1fcd043afbc6bf71ab2e51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MultiSelectPosition: 0
+  m_MultiSelectRotation: 1

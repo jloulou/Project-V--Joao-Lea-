@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 6349743864662101884}
   - component: {fileID: 8388317269615740801}
   - component: {fileID: 2313691164831193035}
+  - component: {fileID: 1635369641639364076}
   m_Layer: 0
   m_Name: camera
   m_TagString: Untagged
@@ -153,10 +154,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 0.001
-  movementAmount: 0.01
-  rotationXSpeed: 0.1
+  movementAmount: 0.43
+  rotationXSpeed: 0.19
   rotationYSpeed: 0.1
-  rotationZSpeed: 0.1
+  rotationZSpeed: 0.69
   isGrabbed: 0
 --- !u!54 &8388317269615740801
 Rigidbody:
@@ -307,3 +308,17 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 0
+--- !u!114 &1635369641639364076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9179337951268001446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 162b4e5a3d1fcd043afbc6bf71ab2e51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MultiSelectPosition: 0
+  m_MultiSelectRotation: 1
