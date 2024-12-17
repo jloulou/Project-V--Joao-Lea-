@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3526752699941806580}
   - component: {fileID: 575734013128521108}
   - component: {fileID: 1060613829804220651}
-  - component: {fileID: 7851768049407426170}
+  - component: {fileID: 3191946708202158833}
   m_Layer: 0
   m_Name: Poster15
   m_TagString: Untagged
@@ -274,7 +274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d80c3e293d8657a4cb970cb4d7362e8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LerpTime: 1
+  LerpTime: 3
 --- !u!65 &1060613829804220651
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -296,7 +296,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.02, y: 0.019999996, z: 0.019999996}
   m_Center: {x: 0, y: 0, z: -0.000000059604645}
---- !u!114 &7851768049407426170
+--- !u!114 &3191946708202158833
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
