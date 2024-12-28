@@ -1,21 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
-
 using UnityEngine;
 using UnityEngine.Events;
 
 public class FadeAndDestroy : MonoBehaviour
 {
-    [Tooltip("Time in seconds before the object starts fading")]
+    public enum FadeCurve { Linear, EaseIn, EaseOut, EaseInOut, Exponential }
+
+    [Header("Fade Settings")]
     public float delayBeforeFade = 2f;
-
-    [Tooltip("Duration of the fade effect in seconds")]
     public float fadeDuration = 3f;
-
-    [Tooltip("Should the script start automatically on enable?")]
+    public FadeCurve fadeCurveType = FadeCurve.Linear;
     public bool autoStart = true;
 
-    // Events
     [Header("Events")]
     public UnityEvent onFadeStart;
     public UnityEvent onFadeComplete;
@@ -23,69 +18,49 @@ public class FadeAndDestroy : MonoBehaviour
 
     private Material[] materials;
     private float fadeTimer;
-    private bool isFading;
     private Color[] originalColors;
-    private bool hasStartedFading = false;
+    private bool isFading;
+    private bool fadeTriggered;
 
     private void Start()
     {
-        // Get all materials from the renderer
+        InitializeMaterials();
+        if (autoStart) StartFade();
+    }
+
+    private void InitializeMaterials()
+    {
         Renderer renderer = GetComponent<Renderer>();
         if (renderer != null)
         {
             materials = renderer.materials;
-            // Store original colors
             originalColors = new Color[materials.Length];
+
             for (int i = 0; i < materials.Length; i++)
             {
                 originalColors[i] = materials[i].color;
+                SetupMaterial(materials[i]);
             }
         }
-        else
-        {
-            Debug.LogWarning("No Renderer component found on object: " + gameObject.name);
-        }
-
-        if (autoStart)
-        {
-            StartFade();
-        }
     }
 
-    public void StartFade()
+    private void SetupMaterial(Material material)
     {
-        // Start the delay coroutine
-        Invoke("BeginFading", delayBeforeFade);
-    }
-
-    private void BeginFading()
-    {
-        isFading = true;
-        fadeTimer = 0f;
-        hasStartedFading = false;
+        material.SetInt("_SrcBlend", (int)UnityEngine.Rendering.BlendMode.SrcAlpha);
+        material.SetInt("_DstBlend", (int)UnityEngine.Rendering.BlendMode.OneMinusSrcAlpha);
+        material.SetInt("_ZWrite", 1);
+        material.EnableKeyword("_ALPHABLEND_ON");
+        material.renderQueue = 3000;
     }
 
     private void Update()
     {
         if (!isFading || materials == null) return;
 
-        // Trigger fade start event only once when fading begins
-        if (!hasStartedFading)
-        {
-            onFadeStart?.Invoke();
-            hasStartedFading = true;
-        }
-
         fadeTimer += Time.deltaTime;
         float normalizedTime = fadeTimer / fadeDuration;
+        float alpha = 1f - ApplyFadeCurve(Mathf.Clamp01(normalizedTime));
 
-        // Calculate alpha based on time
-        float alpha = 1f - Mathf.Clamp01(normalizedTime);
-
-        // Invoke progress event
-        onFadeProgress?.Invoke(1f - alpha);
-
-        // Apply fade to all materials
         for (int i = 0; i < materials.Length; i++)
         {
             Color newColor = originalColors[i];
@@ -93,11 +68,57 @@ public class FadeAndDestroy : MonoBehaviour
             materials[i].color = newColor;
         }
 
-        // Check if fade is complete
+        onFadeProgress?.Invoke(1f - alpha);
+
         if (normalizedTime >= 1f)
         {
             onFadeComplete?.Invoke();
             Destroy(gameObject);
+        }
+    }
+
+    public void OnObjectSelected()
+    {
+        if (!fadeTriggered)
+        {
+            TriggerFade();
+        }
+    }
+
+    public void TriggerFade()
+    {
+        fadeTriggered = true;
+        StartFade();
+    }
+
+    public void StartFade()
+    {
+        Invoke("BeginFading", delayBeforeFade);
+    }
+
+    private void BeginFading()
+    {
+        isFading = true;
+        fadeTimer = 0f;
+        onFadeStart?.Invoke();
+    }
+
+    private float ApplyFadeCurve(float t)
+    {
+        switch (fadeCurveType)
+        {
+            case FadeCurve.Linear:
+                return t;
+            case FadeCurve.EaseIn:
+                return t * t;
+            case FadeCurve.EaseOut:
+                return 1 - (1 - t) * (1 - t);
+            case FadeCurve.EaseInOut:
+                return t < 0.5f ? 2 * t * t : 1 - Mathf.Pow(-2 * t + 2, 2) / 2;
+            case FadeCurve.Exponential:
+                return 1 - Mathf.Pow(2, -10 * t);
+            default:
+                return t;
         }
     }
 }

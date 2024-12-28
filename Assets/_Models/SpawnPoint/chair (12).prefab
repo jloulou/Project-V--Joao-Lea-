@@ -98,6 +98,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delayBeforeFade: 15
   fadeDuration: 15
+  fadeCurveType: 0
   autoStart: 1
   onFadeStart:
     m_PersistentCalls:
@@ -206,6 +207,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delayBeforeFade: 15
   fadeDuration: 15
+  fadeCurveType: 0
   autoStart: 1
   onFadeStart:
     m_PersistentCalls:
@@ -225,6 +227,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3027673728121006619}
+  - component: {fileID: 2805973845288226003}
   m_Layer: 0
   m_Name: chair (12)
   m_TagString: Untagged
@@ -250,6 +253,28 @@ Transform:
   - {fileID: 147538779960679664}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!64 &2805973845288226003
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7367109875118485084}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1 &7748051712652021657
 GameObject:
   m_ObjectHideFlags: 0
@@ -348,6 +373,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delayBeforeFade: 15
   fadeDuration: 15
+  fadeCurveType: 0
   autoStart: 1
   onFadeStart:
     m_PersistentCalls:
