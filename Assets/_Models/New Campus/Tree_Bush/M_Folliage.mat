@@ -9,8 +9,12 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: M_Folliage
   m_Shader: {fileID: 210, guid: 0000000000000000f000000000000000, type: 0}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - _ALPHATEST_ON
+  - _METALLICGLOSSMAP
+  - _NORMALMAP
   m_InvalidKeywords: []
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
@@ -20,11 +24,12 @@ Material:
     RenderType: TransparentCutout
   disabledShaderPasses:
   - GRABPASS
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: b7a417e3a37ce814f9f76a3a86024260, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -48,7 +53,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 31f1b7d089e29274fbf4ca82a8861856, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
