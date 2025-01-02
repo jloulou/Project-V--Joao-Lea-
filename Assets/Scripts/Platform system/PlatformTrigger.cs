@@ -7,54 +7,45 @@ public class PlatformTrigger : MonoBehaviour
     public Platform platform;
     public int targetFloor;
 
-    [Header("Trigger Settings")]
-    public string triggerTag = "Player";  // Objects with this tag can trigger the platform
-    public bool requiresStay = false;     // If true, object must stay in trigger to activate
-
     [Header("Events")]
-    public UnityEvent onTriggerActivated;
-    public UnityEvent onTriggerDeactivated;
+    [Tooltip("Event called when platform starts moving")]
+    public UnityEvent onPlatformTriggered;
+    [Tooltip("Event called when platform reaches destination")]
+    public UnityEvent onPlatformArrived;
 
-    private bool isTriggered = false;
+    private bool isMoving = false;
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag(triggerTag) && !isTriggered)
-        {
-            ActivatePlatform();
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag(triggerTag) && isTriggered && requiresStay)
-        {
-            DeactivatePlatform();
-        }
-    }
-
-    public void ActivatePlatform()
-    {
-        isTriggered = true;
-        platform.nextFloor = targetFloor;
-        onTriggerActivated?.Invoke();
-    }
-
-    public void DeactivatePlatform()
-    {
-        isTriggered = false;
-        onTriggerDeactivated?.Invoke();
-    }
-
-    // Public method to trigger the platform programmatically
+    // Public method that other objects can call to trigger the platform
     public void TriggerPlatform()
     {
-        ActivatePlatform();
+        if (!isMoving)
+        {
+            isMoving = true;
+            platform.nextFloor = targetFloor;
+            onPlatformTriggered?.Invoke();
+        }
     }
 
-    // Public method to reset the trigger
-    public void ResetTrigger()
+    private void Update()
     {
-        DeactivatePlatform();
+        // Check if platform has reached its destination
+        if (isMoving && platform.transform.position == platform.GetFloorPosition(targetFloor))
+        {
+            isMoving = false;
+            onPlatformArrived?.Invoke();
+        }
+    }
+
+    // Optional: Method to check if platform is currently moving
+    public bool IsPlatformMoving()
+    {
+        return isMoving;
+    }
+
+    // Optional: Method to force stop the platform (if needed)
+    public void StopPlatform()
+    {
+        isMoving = false;
+        platform.nextFloor = platform.currentFloor;
     }
 }
