@@ -1,3 +1,4 @@
+// VRNumberKeyboard.cs
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
@@ -14,6 +15,10 @@ public class VRNumberKeyboard : MonoBehaviour
     [Tooltip("Assign your 9 number buttons here in order (1-9)")]
     [SerializeField]
     public Button[] numberButtons = new Button[9];
+
+    [Tooltip("Reference to the PlatformTrigger component")]
+    [SerializeField]
+    private PlatformTrigger platformTrigger;
 
     [Header("Events")]
     [Tooltip("Event triggered when correct password is entered")]
@@ -43,6 +48,11 @@ public class VRNumberKeyboard : MonoBehaviour
         if (numberButtons == null || numberButtons.Length != 9)
         {
             Debug.LogError("Please assign all 9 number buttons in the inspector!");
+        }
+
+        if (platformTrigger == null)
+        {
+            Debug.LogError("PlatformTrigger reference is missing! Please assign it in the inspector.");
         }
     }
 
@@ -105,6 +115,13 @@ public class VRNumberKeyboard : MonoBehaviour
         {
             Debug.Log("Correct password entered!");
             onCorrectPassword.Invoke();
+
+            // Trigger the platform to move to floor 4
+            if (platformTrigger != null)
+            {
+                platformTrigger.targetFloor = 4;  // Set target floor to 4
+                platformTrigger.TriggerPlatform();
+            }
         }
     }
 
