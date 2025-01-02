@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Anchor
+  - Area1
+  - Area2
+  - Area3
   layers:
   - Default
   - TransparentFX
