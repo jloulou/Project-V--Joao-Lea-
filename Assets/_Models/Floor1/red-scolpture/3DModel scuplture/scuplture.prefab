@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1890543388462938342}
   - component: {fileID: 8897945563767627024}
   - component: {fileID: 4320467002745894329}
-  - component: {fileID: 7631821837985056593}
+  - component: {fileID: 6125734811952313058}
   m_Layer: 0
   m_Name: scuplture
   m_TagString: Untagged
@@ -204,7 +204,7 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7631821837985056593}
+      - m_Target: {fileID: 6125734811952313058}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
         m_Mode: 1
@@ -304,7 +304,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_MultiSelectPosition: 0
   m_MultiSelectRotation: 1
---- !u!82 &7631821837985056593
+--- !u!82 &6125734811952313058
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
