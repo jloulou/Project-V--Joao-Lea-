@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
-using System;
+using UnityEngine;
+using System.Collections.Generic;
 
 public class Platform : MonoBehaviour
 {
@@ -10,11 +11,20 @@ public class Platform : MonoBehaviour
 
     public void SetNextFloor(int value)
     {
-        nextFloor = value;
+        if (value >= 0 && value < floors.Count)
+        {
+            nextFloor = value;
+        }
     }
 
-    internal Vector3 GetFloorPosition(int currentFloor)
+    public Vector3 GetFloorPosition(int floorIndex)
     {
-        throw new NotImplementedException();
+        if (floorIndex >= 0 && floorIndex < floors.Count)
+        {
+            return floors[floorIndex].position;
+        }
+
+        // If floor index is invalid, return current position
+        return transform.position;
     }
 }
