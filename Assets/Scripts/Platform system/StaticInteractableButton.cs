@@ -8,19 +8,19 @@ public class StaticInteractableButton : XRBaseInteractable
     [SerializeField]
     private UnityEvent onButtonSelected;
 
-    private Vector3 originalPosition;
-    private Quaternion originalRotation;
+    private Vector3 localPosition;
+    private Quaternion localRotation;
     private Rigidbody rb;
 
     protected override void Awake()
     {
         base.Awake();
 
-        // Store original transform values
-        originalPosition = transform.position;
-        originalRotation = transform.rotation;
+        // Store local transform values
+        localPosition = transform.localPosition;
+        localRotation = transform.localRotation;
 
-        // Get and configure components
+        // Configure the rigidbody
         rb = GetComponent<Rigidbody>();
         if (rb != null)
         {
@@ -31,30 +31,25 @@ public class StaticInteractableButton : XRBaseInteractable
 
     private void Update()
     {
-        // Ensure the button stays in its original position
-        transform.position = originalPosition;
-        transform.rotation = originalRotation;
+        // Maintain local position and rotation relative to parent
+        transform.localPosition = localPosition;
+        transform.localRotation = localRotation;
     }
 
     protected override void OnSelectEntered(SelectEnterEventArgs args)
     {
         base.OnSelectEntered(args);
-        // Invoke the Unity Event
         onButtonSelected?.Invoke();
-        // Trigger your UI keyboard here
         ShowUIKeyboard();
     }
 
     protected override void OnSelectExited(SelectExitEventArgs args)
     {
         base.OnSelectExited(args);
-        // Handle selection exit if needed
     }
 
     private void ShowUIKeyboard()
     {
         // Add your UI keyboard activation logic here
-        // Example:
-        // UIKeyboard.Instance.Show();
     }
 }

@@ -8,13 +8,18 @@ public class PlatformButton : XRBaseInteractable
     public int floor;
     private const float MOVEMENT_THRESHOLD = 0.01f;
     private Collider platformCollider;
-    private bool isMoving = false;
+    private Vector3 localPosition;
+    private Quaternion localRotation;
 
     protected override void Awake()
     {
         base.Awake();
-        // Force the interactable to be non-kinematic and non-movable
-        transform.SetParent(null, true);
+
+        // Store local transform values relative to parent
+        localPosition = transform.localPosition;
+        localRotation = transform.localRotation;
+
+        // Configure the rigidbody
         if (TryGetComponent<Rigidbody>(out Rigidbody rb))
         {
             rb.isKinematic = true;
@@ -25,6 +30,13 @@ public class PlatformButton : XRBaseInteractable
     void Start()
     {
         platformCollider = platform?.GetComponent<Collider>();
+    }
+
+    void Update()
+    {
+        // Maintain local position and rotation relative to parent
+        transform.localPosition = localPosition;
+        transform.localRotation = localRotation;
     }
 
     protected override void OnSelectEntered(SelectEnterEventArgs args)
@@ -49,11 +61,9 @@ public class PlatformButton : XRBaseInteractable
         // Check if player is on the platform
         bool isPlayerOnPlatform = platformCollider.bounds.Contains(interactorTransform.position);
 
-        // Only allow activation if all conditions are met
         return isPlatformAtCorrectPosition && isPlayerOnPlatform;
     }
 
-    // Optional: Visual feedback when button can/cannot be pressed
     protected override void OnHoverEntered(HoverEnterEventArgs args)
     {
         base.OnHoverEntered(args);
@@ -62,8 +72,6 @@ public class PlatformButton : XRBaseInteractable
 
     private void UpdateVisualFeedback(bool canPress)
     {
-        // Add visual feedback here (e.g., change material color)
-        // You can add a material component reference and modify its color
-        // or use any other visual indicator
+        // Add visual feedback implementation here
     }
 }
