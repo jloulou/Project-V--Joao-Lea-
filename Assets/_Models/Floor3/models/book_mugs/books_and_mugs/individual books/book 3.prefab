@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 419681651616766333}
   - component: {fileID: 4438658899576597824}
   - component: {fileID: 1242030444897579376}
-  - component: {fileID: 2017537256560463072}
   - component: {fileID: 9155499165458345947}
+  - component: {fileID: 2017537256560463072}
+  - component: {fileID: 4362540545050452691}
   m_Layer: 0
   m_Name: book 3
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3630887764167452938}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.5141, y: -1.3676, z: -4.0243}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -186,6 +187,21 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 0
+--- !u!114 &9155499165458345947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3630887764167452938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d80c3e293d8657a4cb970cb4d7362e8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LerpTime: 3
+  audioSource: {fileID: 0}
+  releaseSound: {fileID: 0}
 --- !u!65 &2017537256560463072
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -207,7 +223,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.5293397, y: 0.043470383, z: 0.42400098}
   m_Center: {x: -0.0069165826, y: -0.008509636, z: -0.01241374}
---- !u!114 &9155499165458345947
+--- !u!114 &4362540545050452691
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -216,12 +232,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3630887764167452938}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d80c3e293d8657a4cb970cb4d7362e8a, type: 3}
+  m_Script: {fileID: 11500000, guid: 162b4e5a3d1fcd043afbc6bf71ab2e51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LerpTime: 3
-  audioSource: {fileID: 0}
-  releaseSound: {fileID: 0}
+  m_MultiSelectPosition: 0
+  m_MultiSelectRotation: 1
 --- !u!1 &5532027635119923366
 GameObject:
   m_ObjectHideFlags: 0
