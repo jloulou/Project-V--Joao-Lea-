@@ -1,4 +1,3 @@
-// VRNumberKeyboard.cs
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
@@ -110,6 +109,11 @@ public class VRNumberKeyboard : MonoBehaviour
             ClearInput();
             onIncorrectPassword.Invoke();
             Debug.Log("Incorrect password entered!");
+
+            // Add a 1-second delay before deactivating
+            yield return new WaitForSeconds(1f);
+            // Deactivate the VRNumberKeyboard GameObject
+            gameObject.SetActive(false);
         }
         else
         {

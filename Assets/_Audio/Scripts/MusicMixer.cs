@@ -9,7 +9,6 @@ public class MusicMixer : MonoBehaviour
     public AudioMixerSnapshot Area2;
     public AudioMixerSnapshot Area3;
     public AudioMixerSnapshot Area4;
-    public AudioMixerSnapshot Area5;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -33,9 +32,5 @@ public class MusicMixer : MonoBehaviour
             Area4.TransitionTo(3);
         }
 
-        if (other.CompareTag("Area5"))
-        {
-            Area5.TransitionTo(4);
-        }
     }
 }
