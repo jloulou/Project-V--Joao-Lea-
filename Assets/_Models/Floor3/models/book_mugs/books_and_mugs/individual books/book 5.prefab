@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 828876104291560569}
   - component: {fileID: 5521651493249850083}
   - component: {fileID: 677056427374111812}
-  - component: {fileID: 7603180971554521620}
   - component: {fileID: 6229540767949088148}
+  - component: {fileID: 7603180971554521620}
+  - component: {fileID: 7089369043318832026}
   m_Layer: 0
   m_Name: book 5
   m_TagString: Untagged
@@ -186,6 +187,21 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 0
+--- !u!114 &6229540767949088148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2121738991848670841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d80c3e293d8657a4cb970cb4d7362e8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LerpTime: 3
+  audioSource: {fileID: 0}
+  releaseSound: {fileID: 0}
 --- !u!65 &7603180971554521620
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -207,7 +223,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.5970391, y: 0.13812447, z: 0.5545447}
   m_Center: {x: -0.000556767, y: 0.00053310394, z: 0.0030460358}
---- !u!114 &6229540767949088148
+--- !u!114 &7089369043318832026
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -216,12 +232,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2121738991848670841}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d80c3e293d8657a4cb970cb4d7362e8a, type: 3}
+  m_Script: {fileID: 11500000, guid: 162b4e5a3d1fcd043afbc6bf71ab2e51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LerpTime: 3
-  audioSource: {fileID: 0}
-  releaseSound: {fileID: 0}
+  m_MultiSelectPosition: 0
+  m_MultiSelectRotation: 1
 --- !u!1 &2767955987893683163
 GameObject:
   m_ObjectHideFlags: 0
