@@ -6,14 +6,23 @@ public class PlatformButton : XRBaseInteractable
 {
     public Platform platform;
     public int floor;
-    private const float MOVEMENT_THRESHOLD = 0.01f;
+    private const float MOVEMENT_THRESHOLD = 0.1f; // Increased threshold for better detection
     private Collider platformCollider;
     private Vector3 localPosition;
     private Quaternion localRotation;
 
+    [SerializeField]
+    private bool debugMode = true; // Enable to see debug logs
+
     protected override void Awake()
     {
         base.Awake();
+
+        if (platform == null)
+        {
+            Debug.LogError($"Platform reference not set on {gameObject.name}");
+            return;
+        }
 
         // Store local transform values relative to parent
         localPosition = transform.localPosition;
@@ -29,7 +38,15 @@ public class PlatformButton : XRBaseInteractable
 
     void Start()
     {
-        platformCollider = platform?.GetComponent<Collider>();
+        // Get platform collider if not already assigned
+        if (platform != null && platformCollider == null)
+        {
+            platformCollider = platform.GetComponent<Collider>();
+            if (platformCollider == null)
+            {
+                Debug.LogError($"No Collider found on platform for {gameObject.name}");
+            }
+        }
     }
 
     void Update()
@@ -41,25 +58,61 @@ public class PlatformButton : XRBaseInteractable
 
     protected override void OnSelectEntered(SelectEnterEventArgs args)
     {
-        if (!CanActivateButton(args.interactorObject.transform))
+        base.OnSelectEntered(args);
+
+        if (debugMode)
+        {
+            Debug.Log($"Button {gameObject.name} selected");
+        }
+
+        bool canActivate = CanActivateButton(args.interactorObject.transform);
+
+        if (debugMode)
+        {
+            Debug.Log($"Can activate: {canActivate}");
+        }
+
+        if (!canActivate)
             return;
 
-        base.OnSelectEntered(args);
-        platform.SetNextFloor(floor);
+        if (platform != null)
+        {
+            platform.SetNextFloor(floor);
+            if (debugMode)
+            {
+                Debug.Log($"Setting next floor to {floor}");
+            }
+        }
     }
 
     private bool CanActivateButton(Transform interactorTransform)
     {
         if (platform == null || platformCollider == null)
+        {
+            if (debugMode)
+            {
+                Debug.LogWarning($"Platform or collider missing on {gameObject.name}");
+            }
             return false;
+        }
 
         // Check if platform is at the correct position
         Vector3 currentPosition = platform.transform.position;
         Vector3 expectedPosition = platform.GetFloorPosition(platform.currentFloor);
         bool isPlatformAtCorrectPosition = Vector3.Distance(currentPosition, expectedPosition) < MOVEMENT_THRESHOLD;
 
+        if (debugMode)
+        {
+            Debug.Log($"Platform position check: Current={currentPosition}, Expected={expectedPosition}, Distance={Vector3.Distance(currentPosition, expectedPosition)}");
+        }
+
         // Check if player is on the platform
         bool isPlayerOnPlatform = platformCollider.bounds.Contains(interactorTransform.position);
+
+        if (debugMode)
+        {
+            Debug.Log($"Player on platform: {isPlayerOnPlatform}");
+        }
 
         return isPlatformAtCorrectPosition && isPlayerOnPlatform;
     }
@@ -67,11 +120,32 @@ public class PlatformButton : XRBaseInteractable
     protected override void OnHoverEntered(HoverEnterEventArgs args)
     {
         base.OnHoverEntered(args);
-        UpdateVisualFeedback(CanActivateButton(args.interactorObject.transform));
+        bool canPress = CanActivateButton(args.interactorObject.transform);
+        UpdateVisualFeedback(canPress);
+
+        if (debugMode)
+        {
+            Debug.Log($"Button {gameObject.name} hover entered. Can press: {canPress}");
+        }
     }
 
     private void UpdateVisualFeedback(bool canPress)
     {
-        // Add visual feedback implementation here
+        // Optional: Add visual feedback here
+        // For example, change the material color
+        if (TryGetComponent<Renderer>(out Renderer renderer))
+        {
+            renderer.material.color = canPress ? Color.green : Color.red;
+        }
+    }
+
+    // Optional: Add visual hover exit feedback
+    protected override void OnHoverExited(HoverExitEventArgs args)
+    {
+        base.OnHoverExited(args);
+        if (TryGetComponent<Renderer>(out Renderer renderer))
+        {
+            renderer.material.color = Color.white;
+        }
     }
 }
