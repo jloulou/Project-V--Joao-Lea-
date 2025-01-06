@@ -34,12 +34,18 @@ public class PlatformPlayerHandler : MonoBehaviour
     private bool isStandingTimerActive = false;
     private bool isExitTimerActive = false;
 
+    public bool IsPlayerOnPlatform()
+    {
+        return currentPlayer != null;
+    }
+
     private void Start()
     {
-        GetAllCollidersInChildren();
+        // Get all box colliders that are children of this object
+        platformColliders.AddRange(GetComponentsInChildren<BoxCollider>());
+
         platform = GetComponent<Platform>();
 
-        // Initialize the UnityEvents if they haven't been already
         if (onPlayerStandingComplete == null)
             onPlayerStandingComplete = new UnityEvent();
         if (onPlayerExitComplete == null)
@@ -82,14 +88,6 @@ public class PlatformPlayerHandler : MonoBehaviour
                 onPlayerExitComplete.Invoke();
                 isExitTimerActive = false;
             }
-        }
-    }
-
-    private void GetAllCollidersInChildren()
-    {
-        for (int i = 0; i < 4; ++i)
-        {
-            platformColliders.Add(transform.GetChild(i).GetComponent<BoxCollider>());
         }
     }
 
