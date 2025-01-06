@@ -7,73 +7,112 @@ using UnityEngine.Events;
 public class VRNumberKeyboard : MonoBehaviour
 {
     [Header("References")]
-    [Tooltip("Assign your TMP_InputField here")]
-    [SerializeField]
-    public TMP_InputField inputField = null;
+    [SerializeField] public TMP_InputField inputField = null;
+    [SerializeField] public Button[] numberButtons = new Button[9];
+    [SerializeField] private PlatformTrigger platformTrigger;
 
-    [Tooltip("Assign your 9 number buttons here in order (1-9)")]
-    [SerializeField]
-    public Button[] numberButtons = new Button[9];
-
-    [Tooltip("Reference to the PlatformTrigger component")]
-    [SerializeField]
-    private PlatformTrigger platformTrigger;
+    [Header("Settings")]
+    [SerializeField] private float inactivityTimeout = 8f; // Time in seconds before keyboard deactivates
 
     [Header("Events")]
-    [Tooltip("Event triggered when correct password is entered")]
     public UnityEvent onCorrectPassword;
-
-    [Tooltip("Event triggered when incorrect password is cleared")]
     public UnityEvent onIncorrectPassword;
 
-    // Settings
     private const int MAX_INPUT_LENGTH = 3;
     private const string CORRECT_PASSWORD = "123";
+    private float lastInteractionTime;
+    private Coroutine inactivityCheckCoroutine;
 
     private void Awake()
     {
-        // Initialize events if null
-        if (onCorrectPassword == null)
-            onCorrectPassword = new UnityEvent();
-        if (onIncorrectPassword == null)
-            onIncorrectPassword = new UnityEvent();
+        if (onCorrectPassword == null) onCorrectPassword = new UnityEvent();
+        if (onIncorrectPassword == null) onIncorrectPassword = new UnityEvent();
 
-        // Validate references
-        if (inputField == null)
+        ValidateReferences();
+    }
+
+    private void OnEnable()
+    {
+        ResetInactivityTimer();
+        StartInactivityCheck();
+    }
+
+    private void OnDisable()
+    {
+        if (inactivityCheckCoroutine != null)
         {
-            Debug.LogError("Input Field reference is missing! Please assign it in the inspector.");
+            StopCoroutine(inactivityCheckCoroutine);
         }
+    }
+
+    private void ValidateReferences()
+    {
+        if (inputField == null)
+            Debug.LogError("Input Field reference is missing! Please assign it in the inspector.");
 
         if (numberButtons == null || numberButtons.Length != 9)
-        {
             Debug.LogError("Please assign all 9 number buttons in the inspector!");
-        }
 
         if (platformTrigger == null)
-        {
             Debug.LogError("PlatformTrigger reference is missing! Please assign it in the inspector.");
-        }
     }
 
     private void Start()
     {
+        SetupInputField();
+        SetupButtons();
+        ResetInactivityTimer();
+        StartInactivityCheck();
+    }
+
+    private void SetupInputField()
+    {
         if (inputField != null)
         {
-            // Setup input field
             inputField.text = "";
             inputField.characterLimit = MAX_INPUT_LENGTH;
             inputField.contentType = TMP_InputField.ContentType.IntegerNumber;
             inputField.keyboardType = TouchScreenKeyboardType.NumberPad;
         }
+    }
 
-        // Setup buttons
+    private void SetupButtons()
+    {
         for (int i = 0; i < numberButtons.Length; i++)
         {
             if (numberButtons[i] != null)
             {
-                int buttonNumber = i + 1; // Numbers 1-9
+                int buttonNumber = i + 1;
                 numberButtons[i].onClick.AddListener(() => OnNumberButtonPressed(buttonNumber.ToString()));
             }
+        }
+    }
+
+    private void ResetInactivityTimer()
+    {
+        lastInteractionTime = Time.time;
+    }
+
+    private void StartInactivityCheck()
+    {
+        if (inactivityCheckCoroutine != null)
+        {
+            StopCoroutine(inactivityCheckCoroutine);
+        }
+        inactivityCheckCoroutine = StartCoroutine(CheckInactivity());
+    }
+
+    private IEnumerator CheckInactivity()
+    {
+        while (true)
+        {
+            if (Time.time - lastInteractionTime >= inactivityTimeout)
+            {
+                Debug.Log("Keyboard deactivated due to inactivity");
+                gameObject.SetActive(false);
+                yield break;
+            }
+            yield return new WaitForSeconds(0.5f); // Check every half second
         }
     }
 
@@ -81,12 +120,12 @@ public class VRNumberKeyboard : MonoBehaviour
     {
         if (inputField == null) return;
 
-        // Only add number if we haven't reached the limit
+        ResetInactivityTimer();
+
         if (inputField.text.Length < MAX_INPUT_LENGTH)
         {
             inputField.text += number;
 
-            // Check if we've reached max length
             if (inputField.text.Length == MAX_INPUT_LENGTH)
             {
                 ValidatePassword();
@@ -101,7 +140,6 @@ public class VRNumberKeyboard : MonoBehaviour
 
     private IEnumerator HandlePasswordValidation()
     {
-        // Small delay to ensure the last number is visible before clearing
         yield return new WaitForSeconds(0.5f);
 
         if (inputField.text != CORRECT_PASSWORD)
@@ -110,9 +148,7 @@ public class VRNumberKeyboard : MonoBehaviour
             onIncorrectPassword.Invoke();
             Debug.Log("Incorrect password entered!");
 
-            // Add a 1-second delay before deactivating
             yield return new WaitForSeconds(1f);
-            // Deactivate the VRNumberKeyboard GameObject
             gameObject.SetActive(false);
         }
         else
@@ -120,10 +156,9 @@ public class VRNumberKeyboard : MonoBehaviour
             Debug.Log("Correct password entered!");
             onCorrectPassword.Invoke();
 
-            // Trigger the platform to move to floor 4
             if (platformTrigger != null)
             {
-                platformTrigger.targetFloor = 4;  // Set target floor to 4
+                platformTrigger.targetFloor = 4;
                 platformTrigger.TriggerPlatform();
             }
         }
