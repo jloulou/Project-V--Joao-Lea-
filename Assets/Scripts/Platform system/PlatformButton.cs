@@ -1,27 +1,17 @@
-using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.XR.Interaction.Toolkit.Interactables;
+using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 public class PlatformButton : XRGrabInteractable
 {
     public Platform platform;
     public int floor;
-    private PlatformPlayerHandler playerHandler;
 
-    protected override void Awake()
+    protected override void OnSelectEntering(SelectEnterEventArgs args)
     {
-        base.Awake();
-        playerHandler = platform.GetComponent<PlatformPlayerHandler>();
-    }
-
-    protected override void OnSelectEntered(SelectEnterEventArgs args)
-    {
-        if (platform.IsAtValidFloor() && playerHandler.HasPlayerOnPlatform())
-        {
-            base.OnSelectEntered(args);
-            platform.nextFloor = floor;
-        }
+        base.OnSelectEntering(args);
+        platform.nextFloor = floor;
     }
 }
