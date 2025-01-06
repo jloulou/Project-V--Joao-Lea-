@@ -1,7 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using System.Collections.Generic;
 
 public class PlatformPlayerHandler : MonoBehaviour
 {
@@ -39,7 +38,6 @@ public class PlatformPlayerHandler : MonoBehaviour
         GetAllCollidersInChildren();
         platform = GetComponent<Platform>();
 
-        // Initialize the UnityEvents if they haven't been already
         if (onPlayerStandingComplete == null)
             onPlayerStandingComplete = new UnityEvent();
         if (onPlayerExitComplete == null)
@@ -54,7 +52,6 @@ public class PlatformPlayerHandler : MonoBehaviour
 
     private void Update()
     {
-        // Standing timer logic
         if (isStandingTimerActive && currentPlayer != null)
         {
             currentStandingTime += Time.deltaTime;
@@ -69,7 +66,6 @@ public class PlatformPlayerHandler : MonoBehaviour
             }
         }
 
-        // Exit timer logic
         if (isExitTimerActive)
         {
             currentExitTime += Time.deltaTime;
@@ -108,6 +104,11 @@ public class PlatformPlayerHandler : MonoBehaviour
         }
     }
 
+    public bool HasPlayerOnPlatform()
+    {
+        return currentPlayer != null;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
@@ -115,11 +116,9 @@ public class PlatformPlayerHandler : MonoBehaviour
             currentPlayer = other.transform;
             currentPlayer.transform.parent = transform;
 
-            // Start the standing timer
             currentStandingTime = 0f;
             isStandingTimerActive = true;
 
-            // Stop the exit timer if it's running
             isExitTimerActive = false;
             currentExitTime = 0f;
         }
@@ -131,15 +130,11 @@ public class PlatformPlayerHandler : MonoBehaviour
         {
             currentPlayer.transform.parent = null;
 
-            // Reset standing timer
             currentStandingTime = 0f;
             isStandingTimerActive = false;
 
-            // Start exit timer
             currentExitTime = 0f;
             isExitTimerActive = true;
-
-            //currentPlayer = null;
         }
     }
 }
