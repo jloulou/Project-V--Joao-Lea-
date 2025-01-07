@@ -26,15 +26,7 @@ public class PlatformTrigger : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        // Check if platform has reached its destination
-        if (isMoving && platform.transform.position == platform.GetFloorPosition(targetFloor))
-        {
-            isMoving = false;
-            onPlatformArrived?.Invoke();
-        }
-    }
+  
 
     // Optional: Method to check if platform is currently moving
     public bool IsPlatformMoving()
