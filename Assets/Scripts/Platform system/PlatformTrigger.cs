@@ -1,4 +1,3 @@
-// PlatformTrigger.cs
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -16,24 +15,6 @@ public class PlatformTrigger : MonoBehaviour
 
     private bool isMoving = false;
 
-    private void OnEnable()
-    {
-        // Subscribe to platform's arrival event if it exists
-        if (platform != null)
-        {
-            onPlatformArrived.AddListener(ResetTrigger);
-        }
-    }
-
-    private void OnDisable()
-    {
-        // Clean up event subscription
-        if (platform != null)
-        {
-            onPlatformArrived.RemoveListener(ResetTrigger);
-        }
-    }
-
     // Public method that other objects can call to trigger the platform
     public void TriggerPlatform()
     {
@@ -45,11 +26,7 @@ public class PlatformTrigger : MonoBehaviour
         }
     }
 
-    // Reset the trigger when the platform arrives
-    private void ResetTrigger()
-    {
-        isMoving = false;
-    }
+  
 
     // Optional: Method to check if platform is currently moving
     public bool IsPlatformMoving()
@@ -62,6 +39,5 @@ public class PlatformTrigger : MonoBehaviour
     {
         isMoving = false;
         platform.nextFloor = platform.currentFloor;
-        onPlatformArrived?.Invoke();
     }
 }
