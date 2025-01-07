@@ -9,8 +9,6 @@ public class LerpBackWhenReleased : MonoBehaviour
     private Quaternion LetGoEndRotation;
 
     [SerializeField] private float LerpTime;
-    [SerializeField] private AudioSource audioSource;
-    [SerializeField] private AudioClip releaseSound;
     private float Timer = 0;
 
     private bool isGrabbed;
@@ -27,8 +25,6 @@ public class LerpBackWhenReleased : MonoBehaviour
             if (!isGrabbed)
             {
                 Timer = 0;
-                if (audioSource && releaseSound)
-                    audioSource.PlayOneShot(releaseSound);
 
                 LetGoStartPosition = transform.position;
                 LetGoEndRotation = transform.rotation;
@@ -43,11 +39,9 @@ public class LerpBackWhenReleased : MonoBehaviour
 
         LetGoStartPosition = transform.position;
         LetGoEndRotation = transform.rotation;
-
-        if (!audioSource)
-            audioSource = GetComponent<AudioSource>();
     }
 
+    // Update is called once per frame
     private void Update()
     {
         if (IsGrabbed)
