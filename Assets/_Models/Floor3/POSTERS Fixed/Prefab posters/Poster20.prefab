@@ -16,7 +16,6 @@ GameObject:
   - component: {fileID: 4432275181499033861}
   - component: {fileID: 8954482404953772392}
   - component: {fileID: 3868898245721692486}
-  - component: {fileID: 204711712473003282}
   - component: {fileID: 5166649497047410532}
   m_Layer: 0
   m_Name: Poster20
@@ -69,7 +68,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6478536213147159724, guid: 7a00a3f130e034627877acd97e2761c0, type: 3}
+  - {fileID: 2100000, guid: f2026024867ee4847aa5e62d9289851f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -299,20 +298,6 @@ BoxCollider:
   m_Size: {x: 0.019999998, y: 0.019999996, z: 0.020000001}
   m_Center: {x: 0, y: 0, z: 0.0000000018626451}
 --- !u!114 &3868898245721692486
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1450276730343224948}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 162b4e5a3d1fcd043afbc6bf71ab2e51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MultiSelectPosition: 0
-  m_MultiSelectRotation: 1
---- !u!114 &204711712473003282
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

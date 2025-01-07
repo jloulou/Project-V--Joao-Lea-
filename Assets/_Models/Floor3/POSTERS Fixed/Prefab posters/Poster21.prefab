@@ -16,7 +16,6 @@ GameObject:
   - component: {fileID: 2379627362173970444}
   - component: {fileID: 7749834707858205775}
   - component: {fileID: 5783844667043763441}
-  - component: {fileID: 3442031985945371632}
   - component: {fileID: 4864287246575118919}
   m_Layer: 0
   m_Name: Poster21
@@ -299,20 +298,6 @@ BoxCollider:
   m_Size: {x: 0.019999998, y: 0.019999998, z: 0.02}
   m_Center: {x: 0.000000059604645, y: 0, z: -3.4924597e-10}
 --- !u!114 &5783844667043763441
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 613988500509337770}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 162b4e5a3d1fcd043afbc6bf71ab2e51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MultiSelectPosition: 0
-  m_MultiSelectRotation: 1
---- !u!114 &3442031985945371632
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
