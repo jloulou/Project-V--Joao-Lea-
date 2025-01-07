@@ -11,6 +11,8 @@ public class StaticInteractableButton : XRBaseInteractable
     private Vector3 localPosition;
     private Quaternion localRotation;
     private Rigidbody rb;
+    private bool canTrigger = true;
+    private float cooldownTime = 0.5f; // Add a small cooldown to prevent rapid-fire triggers
 
     protected override void Awake()
     {
@@ -39,17 +41,22 @@ public class StaticInteractableButton : XRBaseInteractable
     protected override void OnSelectEntered(SelectEnterEventArgs args)
     {
         base.OnSelectEntered(args);
-        onButtonSelected?.Invoke();
-        ShowUIKeyboard();
+
+        if (canTrigger)
+        {
+            onButtonSelected?.Invoke();
+            canTrigger = false;
+            Invoke("ResetTrigger", cooldownTime);
+        }
+    }
+
+    private void ResetTrigger()
+    {
+        canTrigger = true;
     }
 
     protected override void OnSelectExited(SelectExitEventArgs args)
     {
         base.OnSelectExited(args);
-    }
-
-    private void ShowUIKeyboard()
-    {
-        // Add your UI keyboard activation logic here
     }
 }
