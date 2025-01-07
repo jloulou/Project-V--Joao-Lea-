@@ -10,7 +10,7 @@ public class AudioTrigger_Simple : MonoBehaviour
     public bool triggerEnter = true;
     public bool triggerExit = false;
     public bool destroySelf = false;
-    
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -45,4 +45,4 @@ public class AudioTrigger_Simple : MonoBehaviour
     }
 
 
-}
+}

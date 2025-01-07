@@ -5,7 +5,7 @@ using UnityEngine;
 public class Simple_Audio : MonoBehaviour
 {
     private AudioSource audioS;
-    public Light connectedSpotLight;  // Reference to external spotlight
+    public Light connectedSpotLight;
     public bool triggerEnter = true;
     public bool triggerExit = false;
     public bool destroySelf = false;
@@ -49,7 +49,7 @@ public class Simple_Audio : MonoBehaviour
 
                 if (destroySelf)
                 {
-                    Destroy(this.gameObject);
+                    StartCoroutine(DestroyAfterAudio());
                 }
             }
         }
@@ -69,5 +69,17 @@ public class Simple_Audio : MonoBehaviour
                 }
             }
         }
+    }
+
+    private IEnumerator DestroyAfterAudio()
+    {
+        // Wait until the audio has finished playing
+        while (audioS.isPlaying)
+        {
+            yield return null;
+        }
+
+        // Then destroy the object
+        Destroy(this.gameObject);
     }
 }
