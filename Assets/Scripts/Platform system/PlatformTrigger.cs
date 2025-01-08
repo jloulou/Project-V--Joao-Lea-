@@ -3,8 +3,11 @@ using UnityEngine.Events;
 
 public class PlatformTrigger : MonoBehaviour
 {
-    [Header("Platform Settings")]
+    [Header("References")]
+    [Tooltip("Reference to the Platform component")]
     public Platform platform;
+
+    [Header("Platform Settings")]
     public int targetFloor;
 
     [Header("Events")]
@@ -15,50 +18,62 @@ public class PlatformTrigger : MonoBehaviour
 
     private bool isMoving = false;
 
-    void Awake()
+    private void Awake()
     {
-        Debug.Log($"PlatformTrigger Awake on {gameObject.name}. Initial isMoving: {isMoving}");
+        // Validate the platform reference
+        if (platform == null)
+        {
+            Debug.LogError("Platform reference is missing! Please assign it in the inspector.", this);
+        }
     }
 
-    void Start()
-    {
-        Debug.Log($"PlatformTrigger Start on {gameObject.name}. isMoving: {isMoving}, targetFloor: {targetFloor}");
-    }
-
+    // Public method that other objects can call to trigger the platform
     public void TriggerPlatform()
     {
-        Debug.Log($"TriggerPlatform called on {gameObject.name}. isMoving: {isMoving}, targetFloor: {targetFloor}");
-
-        if (!isMoving)
+        if (!isMoving && platform != null)
         {
-            Debug.Log($"Setting platform.nextFloor to {targetFloor}");
-            isMoving = true;
-            platform.nextFloor = targetFloor;
-            onPlatformTriggered?.Invoke();
-            Debug.Log($"Platform movement triggered on {gameObject.name}");
-        }
-        else
-        {
-            Debug.Log($"Platform trigger ignored on {gameObject.name} because isMoving is true");
+            if (targetFloor >= 0 && targetFloor < platform.floors.Count)
+            {
+                isMoving = true;
+                platform.SetNextFloor(targetFloor);
+                onPlatformTriggered?.Invoke();
+            }
+            else
+            {
+                Debug.LogError($"Target floor {targetFloor} is out of range. Available floors: 0-{platform.floors.Count - 1}");
+            }
         }
     }
 
-    public void ResetTriggerState()
+    private void Update()
     {
-        Debug.Log($"Resetting trigger state on {gameObject.name}. Old isMoving: {isMoving}");
-        isMoving = false;
-        Debug.Log($"New isMoving state: {isMoving}");
+        // Check if platform has reached its destination
+        if (isMoving && platform != null && targetFloor < platform.floors.Count)
+        {
+            Vector3 targetPosition = platform.floors[targetFloor].position;
+            float distanceToTarget = Vector3.Distance(platform.transform.position, targetPosition);
+
+            if (distanceToTarget < 0.01f)  // Small threshold for floating point imprecision
+            {
+                isMoving = false;
+                onPlatformArrived?.Invoke();
+            }
+        }
     }
 
+    // Optional: Method to check if platform is currently moving
     public bool IsPlatformMoving()
     {
         return isMoving;
     }
 
+    // Optional: Method to force stop the platform (if needed)
     public void StopPlatform()
     {
-        Debug.Log($"StopPlatform called on {gameObject.name}");
-        isMoving = false;
-        platform.nextFloor = platform.currentFloor;
+        if (platform != null)
+        {
+            isMoving = false;
+            platform.SetNextFloor(platform.currentFloor);
+        }
     }
 }

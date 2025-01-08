@@ -1,4 +1,3 @@
-// VRNumberKeyboard.cs
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
