@@ -31,11 +31,6 @@ public abstract class PlatformState : State
         {
             currentPos.y = targetY;
             transform.position = currentPos;
-
-            GetComponent<PlatformPlayerHandler>().SetCollidersState(false);
-
-            Debug.Log("Stopped As Close Enough");
-
             return;
         }
 
