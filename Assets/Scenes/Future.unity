@@ -4857,6 +4857,7 @@ MonoBehaviour:
   triggerEnter: 1
   triggerExit: 0
   destroySelf: 0
+  volume: 1
 --- !u!82 &1040398369
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5813,7 +5814,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1147827669
 Transform:
   m_ObjectHideFlags: 0
@@ -7432,6 +7433,7 @@ MonoBehaviour:
   triggerEnter: 1
   triggerExit: 0
   destroySelf: 0
+  volume: 1
 --- !u!82 &1395930723
 AudioSource:
   m_ObjectHideFlags: 0
