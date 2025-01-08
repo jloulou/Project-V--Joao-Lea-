@@ -17,9 +17,17 @@ public class FadeTriggerButton : MonoBehaviour
     {
         // Find all objects with FadeAndDestroy component
         FadeAndDestroy[] fadeObjects = FindObjectsOfType<FadeAndDestroy>();
+        UIFadeAndDestroy[] uiFadeObjects = FindObjectsOfType<UIFadeAndDestroy>();
 
-        // Trigger fade for each object
+        // Trigger fade for each 3D object
         foreach (FadeAndDestroy fade in fadeObjects)
+        {
+            fade.delayBeforeFade = 0f;  // Skip the delay timer
+            fade.TriggerFade();
+        }
+
+        // Trigger fade for each UI object
+        foreach (UIFadeAndDestroy fade in uiFadeObjects)
         {
             fade.delayBeforeFade = 0f;  // Skip the delay timer
             fade.TriggerFade();
