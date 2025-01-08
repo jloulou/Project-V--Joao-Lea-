@@ -2,26 +2,23 @@ using UnityEngine;
 
 public class FirstFloorState : PlatformState
 {
+
     public override void Running()
     {
-        base.Running();
-
         Vector3 currentPos = transform.position;
         float distanceToTarget = targetY - currentPos.y;
 
-        // When platform reaches destination
         if (Mathf.Abs(distanceToTarget) < snapThreshold)
         {
             currentPos.y = targetY;
             transform.position = currentPos;
             GetComponent<PlatformPlayerHandler>().SetCollidersState(false);
-            platform.onPlatformArrived?.Invoke();  // Add this line
+            GetComponent<PlatformTrigger>().ResetTriggerState();  // Add this line
             Debug.Log("Stopped As Close Enough");
         }
+
+        // Continue with existing movement code...
     }
-  
-
-
     public override void OnEnter()
     {
         GetComponent<PlatformPlayerHandler>().SetCollidersState(true);

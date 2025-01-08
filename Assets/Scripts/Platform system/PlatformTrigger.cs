@@ -15,26 +15,35 @@ public class PlatformTrigger : MonoBehaviour
 
     private bool isMoving = false;
 
-    // Public method that other objects can call to trigger the platform
     public void TriggerPlatform()
     {
+        Debug.Log($"TriggerPlatform called. isMoving: {isMoving}");
+
         if (!isMoving)
         {
             isMoving = true;
             platform.nextFloor = targetFloor;
             onPlatformTriggered?.Invoke();
+            Debug.Log("Platform movement triggered");
+        }
+        else
+        {
+            Debug.Log("Platform trigger ignored because isMoving is true");
         }
     }
 
-  
+    // Add this method to manually reset the state
+    public void ResetTriggerState()
+    {
+        Debug.Log($"Resetting trigger state. Old isMoving: {isMoving}");
+        isMoving = false;
+    }
 
-    // Optional: Method to check if platform is currently moving
     public bool IsPlatformMoving()
     {
         return isMoving;
     }
 
-    // Optional: Method to force stop the platform (if needed)
     public void StopPlatform()
     {
         isMoving = false;
