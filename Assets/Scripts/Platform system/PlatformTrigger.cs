@@ -8,6 +8,7 @@ public class PlatformTrigger : MonoBehaviour
     public Platform platform;
 
     [Header("Platform Settings")]
+    [Tooltip("The floor number to move to")]
     public int targetFloor;
 
     [Header("Events")]
@@ -20,6 +21,12 @@ public class PlatformTrigger : MonoBehaviour
 
     private void Awake()
     {
+        // Initialize events
+        if (onPlatformTriggered == null)
+            onPlatformTriggered = new UnityEvent();
+        if (onPlatformArrived == null)
+            onPlatformArrived = new UnityEvent();
+
         // Validate the platform reference
         if (platform == null)
         {
@@ -27,7 +34,7 @@ public class PlatformTrigger : MonoBehaviour
         }
     }
 
-    // Public method that other objects can call to trigger the platform
+    // Public method that can be called by Unity Events
     public void TriggerPlatform()
     {
         if (!isMoving && platform != null)
@@ -61,13 +68,11 @@ public class PlatformTrigger : MonoBehaviour
         }
     }
 
-    // Optional: Method to check if platform is currently moving
     public bool IsPlatformMoving()
     {
         return isMoving;
     }
 
-    // Optional: Method to force stop the platform (if needed)
     public void StopPlatform()
     {
         if (platform != null)
