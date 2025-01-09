@@ -21,8 +21,32 @@ public abstract class PlatformState : State
         platform = GetComponent<Platform>();
     }
 
+    public override void OnEnter()
+    {
+        if (platform == null)
+        {
+            Debug.LogError("Platform reference is null in PlatformState!");
+            return;
+        }
+        platform.StartMoving();
+        Debug.Log("PlatformState.OnEnter called");
+    }
+
+    public override void OnExit()
+    {
+        if (platform == null)
+        {
+            Debug.LogError("Platform reference is null in PlatformState!");
+            return;
+        }
+        platform.StopMoving();
+        Debug.Log("PlatformState.OnExit called");
+    }
+
     public override void Running()
     {
+        if (platform == null) return;
+
         Vector3 currentPos = transform.position;
         float distanceToTarget = targetY - currentPos.y;
 
@@ -31,6 +55,8 @@ public abstract class PlatformState : State
         {
             currentPos.y = targetY;
             transform.position = currentPos;
+            platform.StopMoving();
+            Debug.Log("Platform reached target position");
             return;
         }
 
@@ -41,5 +67,10 @@ public abstract class PlatformState : State
         float direction = distanceToTarget > 0 ? 1f : -1f;
         currentPos.y += speed * direction * Time.fixedDeltaTime;
         transform.position = currentPos;
+    }
+
+    public override void CheckTransitionCondition()
+    {
+        // Implementation will be in derived states
     }
 }

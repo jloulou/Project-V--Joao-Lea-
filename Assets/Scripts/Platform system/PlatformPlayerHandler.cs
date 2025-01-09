@@ -33,6 +33,7 @@ public class PlatformPlayerHandler : MonoBehaviour
     private float currentExitTime = 0f;
     private bool isStandingTimerActive = false;
     private bool isExitTimerActive = false;
+    private bool platformMoving = false;
 
     private void Start()
     {
@@ -87,25 +88,54 @@ public class PlatformPlayerHandler : MonoBehaviour
 
     private void GetAllCollidersInChildren()
     {
-        for (int i = 0; i < 4; ++i)
-        {
-            platformColliders.Add(transform.GetChild(i).GetComponent<BoxCollider>());
-        }
+        platformColliders.Clear();
+        var colliders = GetComponentsInChildren<BoxCollider>();
+        platformColliders.AddRange(colliders);
+
+        if (debugMode)
+            Debug.Log($"Found {platformColliders.Count} colliders in children");
     }
 
     public void SetCollidersState(bool enabled)
     {
+        if (platformColliders.Count == 0)
+        {
+            Debug.LogWarning("No colliders found in platform!");
+            return;
+        }
+
         foreach (BoxCollider collider in platformColliders)
         {
-            collider.enabled = enabled;
-            if (debugMode) Debug.Log($"Collider {collider.name} enabled: {enabled}");
+            if (collider != null)
+            {
+                collider.enabled = enabled;
+                if (debugMode) Debug.Log($"Collider {collider.name} enabled: {enabled}");
+            }
         }
 
         if (currentPlayer)
         {
             currentPlayer.transform.parent = enabled ? transform : null;
-            Debug.Log(enabled);
+            if (debugMode) Debug.Log($"Player parenting set to: {enabled}");
         }
+    }
+
+    public void OnPlatformStartMoving()
+    {
+        if (debugMode)
+            Debug.Log("PlatformPlayerHandler: Platform started moving");
+
+        platformMoving = true;
+        SetCollidersState(true);  // Always enable colliders when platform starts moving
+    }
+
+    public void OnPlatformStopMoving()
+    {
+        if (debugMode)
+            Debug.Log("PlatformPlayerHandler: Platform stopped moving");
+
+        platformMoving = false;
+        // Don't disable colliders here - let them be managed by trigger events
     }
 
     private void OnTriggerEnter(Collider other)
@@ -113,7 +143,17 @@ public class PlatformPlayerHandler : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             currentPlayer = other.transform;
-            currentPlayer.transform.parent = transform;
+
+            if (platformMoving)
+            {
+                SetCollidersState(true);
+                if (debugMode) Debug.Log("Player entered while platform moving - enabling colliders");
+            }
+            else
+            {
+                currentPlayer.transform.parent = transform;
+                if (debugMode) Debug.Log("Player entered while platform stationary - parenting");
+            }
 
             // Start the standing timer
             currentStandingTime = 0f;
@@ -129,7 +169,16 @@ public class PlatformPlayerHandler : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            currentPlayer.transform.parent = null;
+            if (platformMoving)
+            {
+                if (debugMode) Debug.Log("Player exited while platform moving - keeping colliders enabled");
+                // Keep colliders enabled while moving
+            }
+            else
+            {
+                currentPlayer.transform.parent = null;
+                if (debugMode) Debug.Log("Player exited while platform stationary - unparenting");
+            }
 
             // Reset standing timer
             currentStandingTime = 0f;
@@ -139,7 +188,7 @@ public class PlatformPlayerHandler : MonoBehaviour
             currentExitTime = 0f;
             isExitTimerActive = true;
 
-            //currentPlayer = null;
+            if (debugMode) Debug.Log("Player exited platform");
         }
     }
 }
