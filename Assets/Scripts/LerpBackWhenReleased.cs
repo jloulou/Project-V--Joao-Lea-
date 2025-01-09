@@ -2,54 +2,53 @@ using UnityEngine;
 
 public class LerpBackWhenReleased : MonoBehaviour
 {
-    private Vector3 InitialPosition;
-    private Quaternion InitialRotation;
+    private Vector3 initialPosition;
+    private Quaternion initialRotation;
 
-    private Vector3 LetGoStartPosition;
-    private Quaternion LetGoEndRotation;
+    private Vector3 letGoStartPosition;
+    private Quaternion letGoEndRotation;
 
-    [SerializeField] private float LerpTime = 1f;
-    private float Timer = 0;
+    [SerializeField] private float lerpTime = 1f; // Make sure this is editable in the Inspector
+    private float timer = 0;
 
     private bool isGrabbed;
     public bool IsGrabbed
     {
-        get
-        {
-            return isGrabbed;
-        }
+        get { return isGrabbed; }
         set
         {
+            if (isGrabbed == value) return;
+
             isGrabbed = value;
 
             if (!isGrabbed)
             {
-                Timer = 0;
-
-                LetGoStartPosition = transform.position;
-                LetGoEndRotation = transform.rotation;
+                timer = 0;
+                letGoStartPosition = transform.position;
+                letGoEndRotation = transform.rotation;
             }
         }
     }
 
     private void Start()
     {
-        InitialPosition = transform.position;
-        InitialRotation = transform.rotation;
+        initialPosition = transform.position;
+        initialRotation = transform.rotation;
 
-        LetGoStartPosition = transform.position;
-        LetGoEndRotation = transform.rotation;
+        letGoStartPosition = transform.position;
+        letGoEndRotation = transform.rotation;
     }
 
-    // Update is called once per frame
     private void Update()
     {
-        if (IsGrabbed)
-            return;
+        if (IsGrabbed) return;
 
-        Timer = Mathf.Clamp01(Timer + Time.deltaTime / LerpTime);
+        // Debugging LerpTime
+        Debug.Log($"LerpTime: {lerpTime}");
 
-        transform.position = Vector3.Lerp(LetGoStartPosition, InitialPosition, Timer);
-        transform.rotation = Quaternion.Lerp(LetGoEndRotation, InitialRotation, Timer);
+        timer = Mathf.Clamp01(timer + Time.deltaTime / lerpTime);
+
+        transform.position = Vector3.Lerp(letGoStartPosition, initialPosition, timer);
+        transform.rotation = Quaternion.Lerp(letGoEndRotation, initialRotation, timer);
     }
 }
