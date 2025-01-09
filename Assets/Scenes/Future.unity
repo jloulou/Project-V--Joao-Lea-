@@ -5399,6 +5399,7 @@ Transform:
   - {fileID: 1661409677}
   - {fileID: 1575314524}
   - {fileID: 1007895315}
+  - {fileID: 1620687699}
   - {fileID: 130915229}
   - {fileID: 961930153}
   - {fileID: 914807358}
@@ -5414,7 +5415,6 @@ Transform:
   - {fileID: 852213162}
   - {fileID: 921509184}
   - {fileID: 764862744}
-  - {fileID: 1620687699}
   - {fileID: 50738326}
   - {fileID: 1028707160}
   - {fileID: 416656358}
@@ -7884,7 +7884,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1215794393
 MonoBehaviour:
   m_ObjectHideFlags: 0
