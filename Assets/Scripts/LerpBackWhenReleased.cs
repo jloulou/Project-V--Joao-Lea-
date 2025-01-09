@@ -8,7 +8,7 @@ public class LerpBackWhenReleased : MonoBehaviour
     private Vector3 LetGoStartPosition;
     private Quaternion LetGoEndRotation;
 
-    [SerializeField] private float LerpTime;
+    [SerializeField] private float LerpTime = 1f;
     private float Timer = 0;
 
     private bool isGrabbed;
