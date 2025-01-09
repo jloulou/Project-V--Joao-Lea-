@@ -30,9 +30,10 @@ public class VRNumberKeyboard : MonoBehaviour
     private const int MAX_INPUT_LENGTH = 3;
     private const string CORRECT_PASSWORD = "123";
 
-    // Timer variable
+    // Timer variables
     private float lastInteractionTime;
     private bool isTimerActive = true;
+    private Coroutine inactivityCoroutine;
 
     private void Awake()
     {
@@ -52,6 +53,18 @@ public class VRNumberKeyboard : MonoBehaviour
         {
             Debug.LogError("Please assign all 9 number buttons in the inspector!");
         }
+    }
+
+    private void OnEnable()
+    {
+        // Start the inactivity timer whenever the object is enabled
+        StartInactivityTimer();
+    }
+
+    private void OnDisable()
+    {
+        // Stop the inactivity timer when the object is disabled
+        StopInactivityTimer();
     }
 
     private void Start()
@@ -75,18 +88,8 @@ public class VRNumberKeyboard : MonoBehaviour
             }
         }
 
-        // Initialize timer
-        ResetInactivityTimer();
-    }
-
-    private void Update()
-    {
-        // Check for inactivity timeout
-        if (isTimerActive && Time.time - lastInteractionTime >= inactivityTimeout)
-        {
-            Debug.Log("Keyboard deactivated due to inactivity");
-            DeactivateKeyboard();
-        }
+        // Start initial timer
+        StartInactivityTimer();
     }
 
     private void OnNumberButtonPressed(string number)
@@ -117,7 +120,7 @@ public class VRNumberKeyboard : MonoBehaviour
     private IEnumerator HandlePasswordValidation()
     {
         // Stop the inactivity timer during validation
-        isTimerActive = false;
+        StopInactivityTimer();
 
         // Small delay to ensure the last number is visible before clearing
         yield return new WaitForSeconds(0.5f);
@@ -147,23 +150,61 @@ public class VRNumberKeyboard : MonoBehaviour
         }
     }
 
+    private void StartInactivityTimer()
+    {
+        // Stop any existing coroutine
+        StopInactivityTimer();
+
+        // Start new timer
+        isTimerActive = true;
+        lastInteractionTime = Time.time;
+        inactivityCoroutine = StartCoroutine(InactivityCheckRoutine());
+    }
+
+    private void StopInactivityTimer()
+    {
+        if (inactivityCoroutine != null)
+        {
+            StopCoroutine(inactivityCoroutine);
+            inactivityCoroutine = null;
+        }
+        isTimerActive = false;
+    }
+
     private void ResetInactivityTimer()
     {
         lastInteractionTime = Time.time;
-        isTimerActive = true;
+        if (!isTimerActive)
+        {
+            StartInactivityTimer();
+        }
+    }
+
+    private IEnumerator InactivityCheckRoutine()
+    {
+        while (isTimerActive)
+        {
+            if (Time.time - lastInteractionTime >= inactivityTimeout)
+            {
+                Debug.Log("Keyboard deactivated due to inactivity");
+                DeactivateKeyboard();
+                yield break;
+            }
+            yield return new WaitForSeconds(0.5f); // Check every half second
+        }
     }
 
     private void DeactivateKeyboard()
     {
-        isTimerActive = false;
+        StopInactivityTimer();
         gameObject.SetActive(false);
     }
 
-    // Optional: Public method to reactivate the keyboard
+    // Public method to reactivate the keyboard
     public void ActivateKeyboard()
     {
         gameObject.SetActive(true);
         ClearInput();
-        ResetInactivityTimer();
+        StartInactivityTimer();
     }
 }
