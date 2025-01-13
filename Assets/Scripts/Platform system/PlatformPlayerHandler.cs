@@ -1,6 +1,7 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using System.Collections.Generic;
 
 public class PlatformPlayerHandler : MonoBehaviour
 {
@@ -45,13 +46,77 @@ public class PlatformPlayerHandler : MonoBehaviour
         if (onPlayerExitComplete == null)
             onPlayerExitComplete = new UnityEvent();
 
-        // Initially disable colliders when platform is stationary
-        SetCollidersState(false);
-
         if (debugMode)
         {
             Debug.Log($"Platform Handler initialized with {platformColliders.Count} colliders");
             Debug.Log($"Player Layer Mask: {playerLayer.value}");
+        }
+    }
+
+    private void Update()
+    {
+        // Standing timer logic
+        if (isStandingTimerActive && currentPlayer != null)
+        {
+            currentStandingTime += Time.deltaTime;
+
+            if (currentStandingTime >= standingTimeThreshold)
+            {
+                if (debugMode)
+                    Debug.Log("Player standing time threshold reached!");
+
+                onPlayerStandingComplete.Invoke();
+                isStandingTimerActive = false;
+            }
+        }
+
+        // Exit timer logic
+        if (isExitTimerActive)
+        {
+            currentExitTime += Time.deltaTime;
+
+            if (currentExitTime >= exitTimeThreshold)
+            {
+                if (debugMode)
+                    Debug.Log("Player exit time threshold reached!");
+
+                onPlayerExitComplete.Invoke();
+                isExitTimerActive = false;
+            }
+        }
+    }
+
+    private void GetAllCollidersInChildren()
+    {
+        platformColliders.Clear();
+        var colliders = GetComponentsInChildren<BoxCollider>();
+        platformColliders.AddRange(colliders);
+
+        if (debugMode)
+            Debug.Log($"Found {platformColliders.Count} colliders in children");
+    }
+
+    public void SetCollidersState(bool enabled)
+    {
+        if (platformColliders.Count == 0)
+        {
+            Debug.LogWarning("No colliders found in platform!");
+            return;
+        }
+
+        foreach (BoxCollider collider in platformColliders)
+        {
+            if (collider != null)
+            {
+                collider.enabled = enabled;
+                if (debugMode) Debug.Log($"Collider {collider.name} enabled: {enabled}");
+            }
+        }
+
+        if (currentPlayer)
+        {
+            currentPlayer.transform.parent = enabled ? transform : null;
+            if (debugMode) Debug.Log($"Player parenting set to: {enabled}");
         }
     }
 
@@ -61,14 +126,7 @@ public class PlatformPlayerHandler : MonoBehaviour
             Debug.Log("PlatformPlayerHandler: Platform started moving");
 
         platformMoving = true;
-        SetCollidersState(true);  // Enable colliders when platform starts moving
-
-        // If there's a player on the platform, ensure they're parented
-        if (currentPlayer != null)
-        {
-            currentPlayer.transform.parent = transform;
-            if (debugMode) Debug.Log("Parenting player to moving platform");
-        }
+        SetCollidersState(true);  // Always enable colliders when platform starts moving
     }
 
     public void OnPlatformStopMoving()
@@ -77,14 +135,7 @@ public class PlatformPlayerHandler : MonoBehaviour
             Debug.Log("PlatformPlayerHandler: Platform stopped moving");
 
         platformMoving = false;
-        SetCollidersState(false);  // Disable colliders when platform stops
-
-        // If there's a player on the platform, maintain parenting
-        if (currentPlayer != null)
-        {
-            // Keep the player parented even when stopped to maintain position
-            if (debugMode) Debug.Log("Maintaining player parenting on stopped platform");
-        }
+        // Don't disable colliders here - let them be managed by trigger events
     }
 
     private void OnTriggerEnter(Collider other)
@@ -93,9 +144,16 @@ public class PlatformPlayerHandler : MonoBehaviour
         {
             currentPlayer = other.transform;
 
-            // Parent the player regardless of platform state
-            currentPlayer.transform.parent = transform;
-            if (debugMode) Debug.Log($"Player entered platform - Parenting (Platform Moving: {platformMoving})");
+            if (platformMoving)
+            {
+                SetCollidersState(true);
+                if (debugMode) Debug.Log("Player entered while platform moving - enabling colliders");
+            }
+            else
+            {
+                currentPlayer.transform.parent = transform;
+                if (debugMode) Debug.Log("Player entered while platform stationary - parenting");
+            }
 
             // Start the standing timer
             currentStandingTime = 0f;
@@ -111,11 +169,15 @@ public class PlatformPlayerHandler : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            // Always unparent when the player exits
-            if (currentPlayer != null)
+            if (platformMoving)
+            {
+                if (debugMode) Debug.Log("Player exited while platform moving - keeping colliders enabled");
+                // Keep colliders enabled while moving
+            }
+            else
             {
                 currentPlayer.transform.parent = null;
-                if (debugMode) Debug.Log("Player exited platform - Unparenting");
+                if (debugMode) Debug.Log("Player exited while platform stationary - unparenting");
             }
 
             // Reset standing timer
@@ -126,36 +188,7 @@ public class PlatformPlayerHandler : MonoBehaviour
             currentExitTime = 0f;
             isExitTimerActive = true;
 
-            currentPlayer = null;
             if (debugMode) Debug.Log("Player exited platform");
-        }
-    }
-
-    private void GetAllCollidersInChildren()
-    {
-        platformColliders.Clear();
-        var colliders = GetComponentsInChildren<BoxCollider>();
-        platformColliders.AddRange(colliders);
-
-        if (debugMode)
-            Debug.Log($"Found {platformColliders.Count} colliders in children");
-    }
-
-    private void SetCollidersState(bool enabled)
-    {
-        if (platformColliders.Count == 0)
-        {
-            Debug.LogWarning("No colliders found in platform!");
-            return;
-        }
-
-        foreach (BoxCollider collider in platformColliders)
-        {
-            if (collider != null)
-            {
-                collider.enabled = enabled;
-                if (debugMode) Debug.Log($"Collider {collider.name} enabled: {enabled}");
-            }
         }
     }
 }
