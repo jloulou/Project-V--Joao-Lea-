@@ -16,9 +16,6 @@ public abstract class PlatformState : State
     [Tooltip("Higher values = smoother slowdown")]
     protected float smoothing = 1f;
 
-    protected bool hasStartedMoving = false;
-    protected bool hasReachedTarget = false;
-
     protected void Awake()
     {
         platform = GetComponent<Platform>();
@@ -31,11 +28,7 @@ public abstract class PlatformState : State
             Debug.LogError("Platform reference is null in PlatformState!");
             return;
         }
-
-        // Reset state flags
-        hasStartedMoving = false;
-        hasReachedTarget = false;
-
+        platform.StartMoving();
         Debug.Log("PlatformState.OnEnter called");
     }
 
@@ -46,13 +39,7 @@ public abstract class PlatformState : State
             Debug.LogError("Platform reference is null in PlatformState!");
             return;
         }
-
-        // Only stop moving if we haven't already
-        if (platform.isMoving)
-        {
-            platform.StopMoving();
-        }
-
+        platform.StopMoving();
         Debug.Log("PlatformState.OnExit called");
     }
 
@@ -60,28 +47,16 @@ public abstract class PlatformState : State
     {
         if (platform == null) return;
 
-        // Start moving on first Running() call
-        if (!hasStartedMoving)
-        {
-            platform.StartMoving();
-            hasStartedMoving = true;
-            return;
-        }
-
         Vector3 currentPos = transform.position;
         float distanceToTarget = targetY - currentPos.y;
 
-        // Check if we've reached the target
+        // Snap if very close
         if (Mathf.Abs(distanceToTarget) < snapThreshold)
         {
-            if (!hasReachedTarget)
-            {
-                currentPos.y = targetY;
-                transform.position = currentPos;
-                platform.StopMoving();
-                hasReachedTarget = true;
-                Debug.Log("Platform reached target position");
-            }
+            currentPos.y = targetY;
+            transform.position = currentPos;
+            platform.StopMoving();
+            Debug.Log("Platform reached target position");
             return;
         }
 
