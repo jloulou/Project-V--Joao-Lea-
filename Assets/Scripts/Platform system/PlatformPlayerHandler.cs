@@ -25,8 +25,7 @@ public class PlatformPlayerHandler : MonoBehaviour
     [Tooltip("Event triggered after player has been away for the specified time")]
     public UnityEvent onPlayerExitComplete;
 
-    private List<BoxCollider> movementColliders = new List<BoxCollider>();
-    private List<BoxCollider> mainPlatformColliders = new List<BoxCollider>();
+    private List<BoxCollider> platformColliders = new List<BoxCollider>();
     private Transform currentPlayer;
     private Platform platform;
     private float currentStandingTime = 0f;
@@ -37,7 +36,7 @@ public class PlatformPlayerHandler : MonoBehaviour
 
     private void Start()
     {
-        GetColliders();
+        GetAllCollidersInChildren();
         platform = GetComponent<Platform>();
 
         // Initialize the UnityEvents if they haven't been already
@@ -46,58 +45,13 @@ public class PlatformPlayerHandler : MonoBehaviour
         if (onPlayerExitComplete == null)
             onPlayerExitComplete = new UnityEvent();
 
-        // Initially disable only the movement colliders
-        SetMovementCollidersState(false);
+        // Initially disable colliders when platform is stationary
+        SetCollidersState(false);
 
         if (debugMode)
         {
-            Debug.Log($"Platform Handler initialized with {mainPlatformColliders.Count} main colliders and {movementColliders.Count} movement colliders");
+            Debug.Log($"Platform Handler initialized with {platformColliders.Count} colliders");
             Debug.Log($"Player Layer Mask: {playerLayer.value}");
-        }
-    }
-
-    private void GetColliders()
-    {
-        movementColliders.Clear();
-        mainPlatformColliders.Clear();
-
-        // Get all colliders attached directly to this GameObject
-        var platformColliders = GetComponents<BoxCollider>();
-        mainPlatformColliders.AddRange(platformColliders);
-
-        // Get all child colliders
-        var childColliders = GetComponentsInChildren<BoxCollider>();
-        foreach (var collider in childColliders)
-        {
-            // Only add colliders that are on child objects
-            if (collider.gameObject != gameObject)
-            {
-                movementColliders.Add(collider);
-            }
-        }
-
-        if (debugMode)
-        {
-            Debug.Log($"Found {mainPlatformColliders.Count} main platform colliders");
-            Debug.Log($"Found {movementColliders.Count} movement colliders in children");
-        }
-    }
-
-    private void SetMovementCollidersState(bool enabled)
-    {
-        if (movementColliders.Count == 0)
-        {
-            Debug.LogWarning("No movement colliders found in platform children!");
-            return;
-        }
-
-        foreach (BoxCollider collider in movementColliders)
-        {
-            if (collider != null)
-            {
-                collider.enabled = enabled;
-                if (debugMode) Debug.Log($"Movement collider {collider.name} enabled: {enabled}");
-            }
         }
     }
 
@@ -107,7 +61,7 @@ public class PlatformPlayerHandler : MonoBehaviour
             Debug.Log("PlatformPlayerHandler: Platform started moving");
 
         platformMoving = true;
-        SetMovementCollidersState(true);  // Enable movement colliders
+        SetCollidersState(true);  // Enable colliders when platform starts moving
 
         // If there's a player on the platform, ensure they're parented
         if (currentPlayer != null)
@@ -123,7 +77,7 @@ public class PlatformPlayerHandler : MonoBehaviour
             Debug.Log("PlatformPlayerHandler: Platform stopped moving");
 
         platformMoving = false;
-        SetMovementCollidersState(false);  // Disable movement colliders
+        SetCollidersState(false);  // Disable colliders when platform stops
 
         // If there's a player on the platform, maintain parenting
         if (currentPlayer != null)
@@ -177,35 +131,30 @@ public class PlatformPlayerHandler : MonoBehaviour
         }
     }
 
-    private void Update()
+    private void GetAllCollidersInChildren()
     {
-        // Standing timer logic
-        if (isStandingTimerActive && currentPlayer != null)
+        platformColliders.Clear();
+        var colliders = GetComponentsInChildren<BoxCollider>();
+        platformColliders.AddRange(colliders);
+
+        if (debugMode)
+            Debug.Log($"Found {platformColliders.Count} colliders in children");
+    }
+
+    private void SetCollidersState(bool enabled)
+    {
+        if (platformColliders.Count == 0)
         {
-            currentStandingTime += Time.deltaTime;
-
-            if (currentStandingTime >= standingTimeThreshold)
-            {
-                if (debugMode)
-                    Debug.Log("Player standing time threshold reached!");
-
-                onPlayerStandingComplete.Invoke();
-                isStandingTimerActive = false;
-            }
+            Debug.LogWarning("No colliders found in platform!");
+            return;
         }
 
-        // Exit timer logic
-        if (isExitTimerActive)
+        foreach (BoxCollider collider in platformColliders)
         {
-            currentExitTime += Time.deltaTime;
-
-            if (currentExitTime >= exitTimeThreshold)
+            if (collider != null)
             {
-                if (debugMode)
-                    Debug.Log("Player exit time threshold reached!");
-
-                onPlayerExitComplete.Invoke();
-                isExitTimerActive = false;
+                collider.enabled = enabled;
+                if (debugMode) Debug.Log($"Collider {collider.name} enabled: {enabled}");
             }
         }
     }
