@@ -43,8 +43,7 @@ public class LerpBackWhenReleased : MonoBehaviour
     {
         if (IsGrabbed) return;
 
-        // Debugging LerpTime
-        Debug.Log($"LerpTime: {lerpTime}");
+      
 
         timer = Mathf.Clamp01(timer + Time.deltaTime / lerpTime);
 
