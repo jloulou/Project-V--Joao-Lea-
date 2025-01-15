@@ -1,16 +1,8 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class FadeAndDestroy : MonoBehaviour
+public class FixedFadeAndDestroy : MonoBehaviour
 {
-    public enum FadeCurve { Linear, EaseIn, EaseOut, EaseInOut, Exponential }
-
-    [Header("Fade Settings")]
-    public float delayBeforeFade = 2f;
-    public float fadeDuration = 3f;
-    public FadeCurve fadeCurveType = FadeCurve.Linear;
-    public bool autoStart = true;
-
     [Header("Events")]
     public UnityEvent onFadeStart;
     public UnityEvent onFadeComplete;
@@ -22,10 +14,13 @@ public class FadeAndDestroy : MonoBehaviour
     private bool isFading;
     private bool fadeTriggered;
 
+    private const float FADE_DURATION = 25f;
+    private const float FADE_DELAY = 150f;
+
     private void Start()
     {
         InitializeMaterials();
-        if (autoStart) StartFade();
+        StartFade();
     }
 
     private void InitializeMaterials()
@@ -58,8 +53,8 @@ public class FadeAndDestroy : MonoBehaviour
         if (!isFading || materials == null) return;
 
         fadeTimer += Time.deltaTime;
-        float normalizedTime = fadeTimer / fadeDuration;
-        float alpha = 1f - ApplyFadeCurve(Mathf.Clamp01(normalizedTime));
+        float normalizedTime = fadeTimer / FADE_DURATION;
+        float alpha = 1f - ApplyEaseInOutCurve(Mathf.Clamp01(normalizedTime));
 
         for (int i = 0; i < materials.Length; i++)
         {
@@ -93,7 +88,7 @@ public class FadeAndDestroy : MonoBehaviour
 
     public void StartFade()
     {
-        Invoke("BeginFading", delayBeforeFade);
+        Invoke("BeginFading", FADE_DELAY);
     }
 
     private void BeginFading()
@@ -103,22 +98,8 @@ public class FadeAndDestroy : MonoBehaviour
         onFadeStart?.Invoke();
     }
 
-    private float ApplyFadeCurve(float t)
+    private float ApplyEaseInOutCurve(float t)
     {
-        switch (fadeCurveType)
-        {
-            case FadeCurve.Linear:
-                return t;
-            case FadeCurve.EaseIn:
-                return t * t;
-            case FadeCurve.EaseOut:
-                return 1 - (1 - t) * (1 - t);
-            case FadeCurve.EaseInOut:
-                return t < 0.5f ? 2 * t * t : 1 - Mathf.Pow(-2 * t + 2, 2) / 2;
-            case FadeCurve.Exponential:
-                return 1 - Mathf.Pow(2, -10 * t);
-            default:
-                return t;
-        }
+        return t < 0.5f ? 2 * t * t : 1 - Mathf.Pow(-2 * t + 2, 2) / 2;
     }
 }

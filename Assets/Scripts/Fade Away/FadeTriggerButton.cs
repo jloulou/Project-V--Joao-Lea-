@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class FadeTriggerButton : MonoBehaviour
+public class FixedFadeTriggerButton : MonoBehaviour
 {
     private void Start()
     {
@@ -15,21 +15,19 @@ public class FadeTriggerButton : MonoBehaviour
 
     private void TriggerAllFades()
     {
-        // Find all objects with FadeAndDestroy component
-        FadeAndDestroy[] fadeObjects = FindObjectsOfType<FadeAndDestroy>();
-        UIFadeAndDestroy[] uiFadeObjects = FindObjectsOfType<UIFadeAndDestroy>();
+        // Find all objects with FixedFadeAndDestroy component
+        FixedFadeAndDestroy[] fadeObjects = FindObjectsOfType<FixedFadeAndDestroy>();
+        FixedUIFadeAndDestroy[] uiFadeObjects = FindObjectsOfType<FixedUIFadeAndDestroy>();
 
         // Trigger fade for each 3D object
-        foreach (FadeAndDestroy fade in fadeObjects)
+        foreach (FixedFadeAndDestroy fade in fadeObjects)
         {
-            fade.delayBeforeFade = 0f;  // Skip the delay timer
             fade.TriggerFade();
         }
 
         // Trigger fade for each UI object
-        foreach (UIFadeAndDestroy fade in uiFadeObjects)
+        foreach (FixedUIFadeAndDestroy fade in uiFadeObjects)
         {
-            fade.delayBeforeFade = 0f;  // Skip the delay timer
             fade.TriggerFade();
         }
     }

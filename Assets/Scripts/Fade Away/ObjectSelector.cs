@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ObjectSelector : MonoBehaviour
+public class FixedObjectSelector : MonoBehaviour
 {
     private void Update()
     {
@@ -11,11 +11,9 @@ public class ObjectSelector : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit))
             {
-                var fadeScript = hit.collider.GetComponent<FadeAndDestroy>();
+                var fadeScript = hit.collider.GetComponent<FixedFadeAndDestroy>();
                 if (fadeScript != null)
                 {
-                    // Skip timer, start fade immediately
-                    fadeScript.delayBeforeFade = 0f;
                     fadeScript.OnObjectSelected();
                 }
             }
