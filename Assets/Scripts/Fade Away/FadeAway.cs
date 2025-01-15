@@ -76,7 +76,7 @@ public class FixedFadeAndDestroy : MonoBehaviour
     {
         if (!fadeTriggered)
         {
-            TriggerFade();
+            TriggerFadeImmediate();
         }
     }
 
@@ -84,6 +84,12 @@ public class FixedFadeAndDestroy : MonoBehaviour
     {
         fadeTriggered = true;
         StartFade();
+    }
+
+    public void TriggerFadeImmediate()
+    {
+        fadeTriggered = true;
+        BeginFading();
     }
 
     public void StartFade()

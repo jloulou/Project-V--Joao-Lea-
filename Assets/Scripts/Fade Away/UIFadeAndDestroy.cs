@@ -55,7 +55,7 @@ public class FixedUIFadeAndDestroy : MonoBehaviour
     {
         if (!fadeTriggered)
         {
-            TriggerFade();
+            TriggerFadeImmediate();
         }
     }
 
@@ -63,6 +63,12 @@ public class FixedUIFadeAndDestroy : MonoBehaviour
     {
         fadeTriggered = true;
         StartFade();
+    }
+
+    public void TriggerFadeImmediate()
+    {
+        fadeTriggered = true;
+        BeginFading();
     }
 
     public void StartFade()

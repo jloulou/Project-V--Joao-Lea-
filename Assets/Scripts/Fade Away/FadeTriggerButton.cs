@@ -19,16 +19,16 @@ public class FixedFadeTriggerButton : MonoBehaviour
         FixedFadeAndDestroy[] fadeObjects = FindObjectsOfType<FixedFadeAndDestroy>();
         FixedUIFadeAndDestroy[] uiFadeObjects = FindObjectsOfType<FixedUIFadeAndDestroy>();
 
-        // Trigger fade for each 3D object
+        // Trigger immediate fade for each 3D object
         foreach (FixedFadeAndDestroy fade in fadeObjects)
         {
-            fade.TriggerFade();
+            fade.TriggerFadeImmediate();
         }
 
-        // Trigger fade for each UI object
+        // Trigger immediate fade for each UI object
         foreach (FixedUIFadeAndDestroy fade in uiFadeObjects)
         {
-            fade.TriggerFade();
+            fade.TriggerFadeImmediate();
         }
     }
 
