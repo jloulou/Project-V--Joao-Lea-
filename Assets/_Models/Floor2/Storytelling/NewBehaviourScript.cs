@@ -10,7 +10,7 @@ public class NewBehaviourScript : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            sing.SetBool("Armature|Armature|mixamo_com|Layer0", true);
+            sing.Setstate("Armature|Armature|mixamo_com|Layer0", true);
         }
     }
 
@@ -18,7 +18,7 @@ public class NewBehaviourScript : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            sing.SetBool("Armature|Armature|mixamo_com|Layer0", false);
+            sing.Setstate("Armature|Armature|mixamo_com|Layer0", false);
         }
     }
 }
